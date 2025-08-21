@@ -1,0 +1,33 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tipografía y utilidades */
+:root {
+  --brand: #0369a1; /* sky-700 */
+}
+html, body {
+  scroll-behavior: smooth;
+}
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold shadow-sm transition;
+}
+.btn-primary {
+  @apply bg-sky-600 text-white hover:bg-sky-700;
+}
+.btn-outline {
+  @apply border border-slate-300 hover:bg-slate-50;
+}
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
+.card-body {
+  @apply p-6;
+}
+.badge {
+  @apply inline-flex items-center gap-2 text-sm text-slate-600;
+}
