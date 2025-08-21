@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import Section from "./Section";
 import LanguageToggle from "./LanguageToggle";
 import { translations } from "../data/translations";
+import Image from "next/image";
 
 export default function Landing() {
+
   const [lang, setLang] = useState("es");
   const t = translations[lang];
 
@@ -20,14 +22,14 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800">
-      <LanguageToggle lang={lang} setLang={setLang} />
 
       {/* Header */}
       <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
         <div className="container h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-sky-600" />
-            <span className="font-bold text-xl">Protección Total</span>
+            <a href="#home">
+              <Image src="/images/PresentacionTotal (3).png" alt="Logo ProteccionTotal .Pro" width={150} height={50}/>
+          </a>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#servicios" className="hover:text-slate-900">{t.nav.services}</a>
@@ -36,19 +38,25 @@ export default function Landing() {
             <a href="#testimonios" className="hover:text-slate-900">{t.nav.testimonials}</a>
             <a href="#contacto" className="hover:text-slate-900">{t.nav.contact}</a>
           </nav>
-          <a href="#contacto" className="hidden sm:block">
-            <button className="btn btn-primary rounded-2xl">{t.hero.cta1}</button>
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="#contacto" className="hidden sm:block">
+              <button className="btn btn-primary rounded-2xl">{t.hero.cta1}</button>
+            </a>
+            <a className="sm:block">
+              <LanguageToggle lang={lang} setLang={setLang} />
+            </a>
+          </div>
         </div>
+
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <Section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-100 via-white to-white" />
         <div className="container py-20 grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-              {t.hero.title.split(' ').slice(0,3).join(' ')} <span className="text-sky-600">{t.hero.title.split(' ').slice(3).join(' ')}</span>
+              {t.hero.title.split(' ').slice(0,3).join(' ')} <span className="text-red-700">{t.hero.title.split(' ').slice(3).join(' ')}</span>
             </h1>
             <p className="mt-4 text-lg text-slate-600">{t.hero.subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -57,7 +65,7 @@ export default function Landing() {
             </div>
             <ul className="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600">
               {t.hero.bullets.map((b, i) => (
-                <li key={i} className="badge"><span className="w-2 h-2 rounded-full bg-sky-500" />{b}</li>
+                <li key={i} className="badge"><span className="w-2 h-2 rounded-full bg-red-700" />{b}</li>
               ))}
             </ul>
           </motion.div>
@@ -67,7 +75,7 @@ export default function Landing() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </Section>
 
       {/* Servicios */}
       <Section id="servicios" title={t.services.title} subtitle={t.services.subtitle}>

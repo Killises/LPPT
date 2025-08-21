@@ -5,7 +5,7 @@
 
 /* Tipografía y utilidades */
 :root {
-  --brand: #0369a1; /* sky-700 */
+  --brand: #a53030; /* sky-700 */
 }
 html, body {
   scroll-behavior: smooth;
@@ -17,7 +17,7 @@ html, body {
   @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold shadow-sm transition;
 }
 .btn-primary {
-  @apply bg-sky-600 text-white hover:bg-sky-700;
+  @apply bg-red-700 text-white hover:bg-red-600;
 }
 .btn-outline {
   @apply border border-slate-300 hover:bg-slate-50;
