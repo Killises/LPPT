@@ -16,7 +16,7 @@ export const translations = {
         { title: "Alarmas inteligentes", desc: "Detección precisa de intrusos con sensores y alertas en tiempo real." },
         { title: "Videovigilancia HD", desc: "Imágenes nítidas, visión nocturna y acceso remoto desde cualquier lugar." },
         { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa." },
-        { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas." }
+        { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas.", src:"/images/PTLogo.png" }
       ],
       more: "Conoce más"
     },
@@ -38,8 +38,16 @@ export const translations = {
       title: "Testimonios",
       subtitle: "La tranquilidad de nuestros clientes lo dice todo.",
       items: [
-        { author: "Carlos M.", text: "Con Ajax me siento tranquilo, puedo ver mi negocio desde el celular." },
-        { author: "Laura G.", text: "Instalaron en el mismo día, ¡excelente servicio!" }
+        { 
+          author: "Carlos M.", 
+          text: "Con Ajax me siento tranquilo, puedo ver mi negocio desde el celular.", 
+          src: "/inst/anexo4.jpg" 
+        },
+        {
+          author: "Laura G.",
+          text: "Instalaron en el mismo día, ¡excelente servicio!", 
+          src: "/inst/anexo1.jpg"
+        }
       ]
     },
     process: {

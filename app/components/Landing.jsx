@@ -84,11 +84,16 @@ export default function Landing() {
         <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid md:grid-cols-2 gap-6">
           {t.services.items.map((s, i) => (
             <motion.div variants={item} key={i} className="card">
-              <div className="card-body">
+              <div className="card-body grid grid-flow-row">
                 <h3 className="text-lg font-semibold">{s.title}</h3>
                 <p className="mt-2 text-slate-600">{s.desc}</p>
-                <div className="mt-4">
-                  <button className="btn btn-outline rounded-xl">{t.services.more}</button>
+                <div className="mt-4  h-auto w-auto relative border-8 border-red-700 justify-items-center" >
+                  <Image 
+                  src={s.src}  alt="Logo"
+                  width={128}
+                  height={128}
+                  style={{ position: 'relative'}}
+                  ></Image>
                 </div>
               </div>
             </motion.div>
@@ -138,6 +143,12 @@ export default function Landing() {
               <div className="card-body">
                 <p className="text-slate-700">“{x.text}”</p>
                 <p className="mt-4 text-sm text-slate-500">— {x.author}</p>
+                <div className="mt-4  relative justify-items-center" >
+                  <img className="h-auto w-1/3 "
+                  src={x.src}  
+                  alt="Logo"
+                  />
+                </div>
               </div>
             </motion.div>
           ))}
