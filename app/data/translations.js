@@ -7,7 +7,7 @@ export const translations = {
       subtitle: "Instalamos sistemas de seguridad inteligentes en menos de 24 horas para proteger lo que más valoras.",
       cta1: "Cotiza ahora",
       cta2: "Ver servicios",
-      bullets: ["Instalación < 24 h", "Tecnología europea", "Atención local en Querétaro"]
+      bullets: ["Instalación en menos de 24 horas en Querétaro", "Tecnología No.1 en europa", "Atención local en Querétaro y soporte nacional"]
     },
     services: {
       title: "Servicios",

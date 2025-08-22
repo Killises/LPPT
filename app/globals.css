@@ -20,7 +20,7 @@ html, body {
   @apply bg-red-700 text-white hover:bg-red-600;
 }
 .btn-outline {
-  @apply border border-slate-300 hover:bg-slate-50;
+  @apply border border-slate-400 hover:bg-slate-200;
 }
 .card {
   @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
