@@ -3,7 +3,7 @@ export const translations = {
   es: {
     nav: { services: "Servicios", benefits: "Beneficios", why: "¿Por qué elegirnos?", testimonials: "Testimonios", contact: "Contacto" },
     hero: {
-      title: "Protección total para tu hogar y negocio",
+      title: "Protección Total .Pro para tu hogar y negocio",
       subtitle: "Instalamos sistemas de seguridad inteligentes en menos de 24 horas para proteger lo que más valoras.",
       cta1: "Cotiza ahora",
       cta2: "Ver servicios",
@@ -13,10 +13,10 @@ export const translations = {
       title: "Servicios",
       subtitle: "Soluciones integrales: alarmas, videovigilancia, alertas y control de acceso.",
       items: [
-        { title: "Alarmas inteligentes", desc: "Detección precisa de intrusos con sensores y alertas en tiempo real." },
-        { title: "Videovigilancia HD", desc: "Imágenes nítidas, visión nocturna y acceso remoto desde cualquier lugar." },
-        { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa." },
-        { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas.", src:"/images/PTLogo.png" }
+        { title: "Alarmas inteligentes", desc: "Detección precisa de intrusos con sensores y alertas en tiempo real.", src:'/srv/Devices.jpg'},
+        { title: "Videovigilancia HD", desc: "Imágenes nítidas, visión nocturna y acceso remoto desde cualquier lugar.", src:'/srv/Bulletcam.png' },
+        { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa.", src:"/srv/alert.gif" },
+        { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas.", src:"/srv/acces.jpg" }
       ],
       more: "Conoce más"
     },

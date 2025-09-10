@@ -31,3 +31,6 @@ html, body {
 .badge {
   @apply inline-flex items-center gap-2 text-sm text-slate-600;
 }
+.li {
+  @apply bg-red-700
+}

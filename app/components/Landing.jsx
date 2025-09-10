@@ -6,6 +6,7 @@ import Section from "./Section";
 import LanguageToggle from "./LanguageToggle";
 import { translations } from "../data/translations";
 import Image from "next/image";
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Landing() {
 
@@ -15,10 +16,88 @@ export default function Landing() {
   const container = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { staggerChildren: 0.08 } } };
   const item = { hidden: { opacity: 0, y: 15 }, show: { opacity: 1, y: 0 } };
 
-  const [form, setForm] = useState({ nombre: "", telefono: "", email: "", servicio: t.contact.services[0], comentarios: "" });
+  /*const [form, setForm] = useState({ nombre: "", telefono: "", email: "", servicio: t.contact.services[0], comentarios: "" });
   const [sent, setSent] = useState(false);
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-  const onSubmit = (e) => { e.preventDefault(); setSent(true); };
+  const onSubmit = (e) => { e.preventDefault(); setSent(true); };*/
+
+  //Fromspree
+
+  const [form, setForm] = useState({ name: "", phone: "", email: "", servicio: t.contact.services[0], comentarios: "" });
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState("");
+
+  // 🔹 Validación en tiempo real
+  const validate = (field, value) => {
+    let error = "";
+
+    if (field === "name" && !value.trim()) {
+      error = "El nombre es obligatorio.";
+    }
+    if (field === "phone" && !value.trim()) {
+      const phoneRegex =/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+      if (!value) error = "El telefono es obligatorio.";
+      else if (!phoneRegex.test(value)) error = "Numero inválido.";
+      error = "El telefono es obligatorio.";
+    }
+    if (field === "email") {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!value) error = "El correo es obligatorio.";
+      else if (!emailRegex.test(value)) error = "Correo inválido.";
+    }
+    if (field === "message") {
+      if (!value) error = "El mensaje es obligatorio.";
+      else if (value.length < 10)
+        error = "El mensaje debe tener al menos 10 caracteres.";
+    }
+
+    setErrors((prev) => ({ ...prev, [field]: error }));
+    return error === "";
+  };
+
+  // 🔹 Manejo de cambios con validación inmediata
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+    validate(name, value);
+  };
+
+  // 🔹 Submit del formulario
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validar todos los campos antes de enviar
+    const isNameValid = validate("name", form.name);
+    const isPhoneValid = validate("message", form.phone);
+    const isEmailValid = validate("email", form.email);
+    const isMessageValid = validate("message", form.message);
+
+    if (!isNameValid || !isEmailValid || !isMessageValid || !isPhoneValid) {
+      setStatus("Corrige los errores antes de enviar ❌");
+      return;
+    }
+
+    setStatus("Enviando...");
+
+    try {
+      const res = await fetch("https://formspree.io/f/myzdojnz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setStatus("Mensaje enviado con éxito ✅");
+        setForm({ name: "", phone: "", email: "", servicio: t.contact.services[0], comentarios: ""});
+        setErrors({});
+      } else {
+        setStatus("Error al enviar ❌");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("Error en el servidor ❌");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800">
@@ -28,15 +107,15 @@ export default function Landing() {
         <div className="container h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <a href="#home">
-              <Image src="/images/PresentacionTotal (3).png" alt="Logo ProteccionTotal .Pro" width={150} height={50}/>
-          </a>
+              <Image src="/images/PresentacionTotal (3).png" alt="Logo ProteccionTotal .Pro" width={150} height={50} />
+            </a>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#servicios" className="hover:text-slate-900">{t.nav.services}</a>
             <a href="#beneficios" className="hover:text-slate-900">{t.nav.benefits}</a>
             <a href="#elegirnos" className="hover:text-slate-900">{t.nav.why}</a>
-            <a href="#testimonios" className="hover:text-slate-900">{t.nav.testimonials}</a>
-            <a href="#contacto" className="hover:text-slate-900">{t.nav.contact}</a>
+            <a href="#testimonios" className="hover:text-red-700">{t.nav.testimonials}</a>
+            <a href="#contacto" className="hover:text-slate-950">{t.nav.contact}</a>
           </nav>
           <div className="flex items-center gap-3">
             <a href="#contacto" className="hidden sm:block">
@@ -55,25 +134,25 @@ export default function Landing() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-100 via-white to-white" />
         <div className="container py-20 grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.0 }}>
-          <div className="flex flex-wrap gap-2">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-              {t.hero.title.split(' ').slice(0,3).join(' ')} <span className="text-red-700">{t.hero.title.split(' ').slice(3).join(' ')}</span>
-            </h1>
-            <p className="mt-4 text-lg text-slate-600">{t.hero.subtitle}</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#contacto" className="btn btn-primary rounded-2xl">{t.hero.cta1}</a>
-             {/*  <a href="#servicios" className="btn btn-outline rounded-2xl">{t.hero.cta2}</a> */}
-            </div>
-            <ul className="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600">
-              {t.hero.bullets.map((b, i) => (
-                <li key={i} className="badge"><span className="p-1 rounded-full bg-red-700" />{b}</li>
-              ))}
-            </ul>
+            <div className="flex flex-wrap gap-2">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+                {t.hero.title.split(' ').slice(0, 3).join(' ')} <span className="text-red-700">{t.hero.title.split(' ').slice(3).join(' ')}</span>
+              </h1>
+              <p className="mt-4 text-lg text-slate-600">{t.hero.subtitle}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="#contacto" className="btn btn-primary rounded-2xl">{t.hero.cta1}</a>
+                {/*  <a href="#servicios" className="btn btn-outline rounded-2xl">{t.hero.cta2}</a> */}
+              </div>
+              <ul className="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600">
+                {t.hero.bullets.map((b, i) => (
+                  <li key={i} className="badge"><span className="p-1 rounded-full bg-red-700" />{b}</li>
+                ))}
+              </ul>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.60 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1.5 }}>
             <div className="relative aspect-video rounded-3xl flex items-center justify-center">
-              <Image  src="/images/Jeweller House.png" fill={true}  objectFit="contain" />
+              <Image src="/images/Jeweller House.png" fill={true} objectFit="contain" />
             </div>
           </motion.div>
         </div>
@@ -84,16 +163,15 @@ export default function Landing() {
         <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid md:grid-cols-2 gap-6">
           {t.services.items.map((s, i) => (
             <motion.div variants={item} key={i} className="card">
-              <div className="card-body grid grid-flow-row">
+              <div className="card-body grid grid-flow-row justify-items-center">
                 <h3 className="text-lg font-semibold">{s.title}</h3>
                 <p className="mt-2 text-slate-600">{s.desc}</p>
-                <div className="mt-4  h-auto w-auto relative border-8 border-red-700 justify-items-center" >
-                  <Image 
-                  src={s.src}  alt="Logo"
-                  width={128}
-                  height={128}
-                  style={{ position: 'relative'}}
-                  ></Image>
+                <div className="mt-4  h-1/2 w-10/12 relative " >
+                  <img
+                    className="rounded-xl"
+                    src={s.src} alt="Logo"
+                    style={{ position: 'relative' }}
+                  ></img>
                 </div>
               </div>
             </motion.div>
@@ -123,13 +201,19 @@ export default function Landing() {
             <p className="mt-3 text-slate-600">{t.why.subtitle}</p>
             <ul className="mt-6 space-y-3 text-slate-700">
               {t.why.bullets.map((b, i) => (
-                <li key={i} className="flex items-start gap-3"><span className="mt-2 w-2 h-2 rounded-full bg-sky-500" />{b}</li>
+                <li key={i} className="flex items-start gap-3"><span className=" li mt-2 w-2 h-2 rounded-full" />{b}</li>
               ))}
             </ul>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
-            <div className="aspect-[4/3] rounded-3xl bg-slate-200/60 border border-slate-200 shadow-inner flex items-center justify-center">
-              <span className="text-slate-500">Imagen lateral / caso de éxito</span>
+            <div className=" h-auto w-auto relative aspect-[2/2] rounded-3xl  flex items-center justify-center">
+              <Image className="rounded-2xl"
+                src={"/images/Dist.png"} alt="Logo"
+                width={500}
+                height={600}
+              >
+
+              </Image>
             </div>
           </motion.div>
         </div>
@@ -145,8 +229,8 @@ export default function Landing() {
                 <p className="mt-4 text-sm text-slate-500">— {x.author}</p>
                 <div className="mt-4  relative justify-items-center" >
                   <img className="h-auto w-1/3 "
-                  src={x.src}  
-                  alt="Logo"
+                    src={x.src}
+                    alt="Logo"
                   />
                 </div>
               </div>
@@ -172,6 +256,7 @@ export default function Landing() {
       </Section>
 
       {/* Contacto */}
+      {/*
       <Section id="contacto" title={t.contact.title} subtitle={t.contact.subtitle} muted>
         <div className="grid lg:grid-cols-2 gap-10">
           <form onSubmit={onSubmit} className="space-y-5">
@@ -191,7 +276,79 @@ export default function Landing() {
               {sent && <p className="text-sm text-green-600 mt-2">{t.contact.thanks}</p>}
             </div>
           </form>
-          <div className="card">
+
+        </div>
+      </Section> */}
+
+      <Section id="contacto" title={t.contact.title} subtitle={t.contact.subtitle} muted >
+        <div className="grid lg:grid-cols-2 gap-10">
+          <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder={t.contact.name}
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                  className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.name ? "border-red-500" : "border-gray-300"}`}
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                  )
+                }
+                <input
+                  name="phone"
+                  placeholder={t.contact.phone}
+                  value={form.phone}
+                  onChange={handleChange}
+                  required
+                  className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.phone ? "border-red-500" : "border-gray-300"
+                  }`}
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                )}
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4" >
+                <input
+                  type="email"
+                  name="email"
+                  placeholder={t.contact.email}
+                  value={form.email}
+                  onChange={handleChange}
+                  className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
+                <select 
+                  name="servicio" 
+                  value={form.servicio} 
+                  onChange={handleChange} 
+                  className="rounded-xl border border-slate-300 p-3 bg-white">
+                  {t.contact.services.map((s) => <option key={s}>{s}</option>)}
+                </select>
+              </div>
+              <div className="grid grid-cols-1 gap-4">
+                <textarea
+                  name="message"
+                  placeholder={t.contact.comments}
+                  value={form.message}
+                  onChange={handleChange}
+                  rows={4}
+                  className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.message ? "border-red-500" : "border-gray-300"
+                    }`}
+                />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                )}
+                <button type="submit" className="btn btn-primary rounded-2xl">{t.contact.send}</button>
+              </div>
+              <p className="text-center text-sm mt-2">{status}</p>
+            </form>
+          <div id='contactoDirecto' className="card">
             <div className="card-body">
               <h3 className="text-xl font-semibold">Contacto directo</h3>
               <ul className="mt-4 space-y-3 text-slate-700">
@@ -217,13 +374,21 @@ export default function Landing() {
                   Santiago de Querétaro, Qro.</li>
               </ul>
               <div className=" mt-6 aspect-video rounded-2xl bg-slate-200/60 border border-slate-200 shadow-inner flex items-center justify-center p-0">
-                <iframe className="rounded-2xl" width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDoOLq_ts27g3vEog9sGYB0GJSyWBDK9gs&center=20.5999582%2C-100.4207807&zoom=12&q=Proteccion%Total%.%Pro" allowfullscreen>
+                <iframe 
+                  className="rounded-2xl" 
+                  width="100%" 
+                  height="100%" 
+                  frameborder="0" 
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDoOLq_ts27g3vEog9sGYB0GJSyWBDK9gs&center=20.5999582%2C-100.4207807&zoom=12&q=Proteccion%Total%.%Pro" 
+                  allowfullscreen>
                 </iframe>
               </div>
             </div>
           </div>
         </div>
       </Section>
+
+
 
       {/* Footer */}
       <footer className="py-3 border-t">
@@ -237,5 +402,6 @@ export default function Landing() {
         </div>
       </footer>
     </div>
-  );
+
+  )
 }
