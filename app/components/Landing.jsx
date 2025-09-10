@@ -6,6 +6,7 @@ import Section from "./Section";
 import LanguageToggle from "./LanguageToggle";
 import { translations } from "../data/translations";
 import Image from "next/image";
+import Header from "./Header"
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Landing() {
@@ -16,13 +17,7 @@ export default function Landing() {
   const container = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { staggerChildren: 0.08 } } };
   const item = { hidden: { opacity: 0, y: 15 }, show: { opacity: 1, y: 0 } };
 
-  /*const [form, setForm] = useState({ nombre: "", telefono: "", email: "", servicio: t.contact.services[0], comentarios: "" });
-  const [sent, setSent] = useState(false);
-  const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-  const onSubmit = (e) => { e.preventDefault(); setSent(true); };*/
-
   //Fromspree
-
   const [form, setForm] = useState({ name: "", phone: "", email: "", servicio: t.contact.services[0], comentarios: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("");
@@ -103,8 +98,8 @@ export default function Landing() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800">
 
       {/* Header */}
-      <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
-        <div className="container h-16 flex items-center justify-between">
+      {/* <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
+        <div className="container h-16 flex items-center justify-between px-4 sm:px-6 md:px-5">
           <div className="flex items-center gap-3">
             <a href="#home">
               <Image src="/images/PresentacionTotal (3).png" alt="Logo ProteccionTotal .Pro" width={150} height={50} />
@@ -125,9 +120,15 @@ export default function Landing() {
               <LanguageToggle lang={lang} setLang={setLang} />
             </a>
           </div>
+          <div className="md:hidden">
+            <button className="p-2 rounded-md border border-slate-200">
+              ☰
+            </button>
+          </div>
         </div>
 
-      </header>
+      </header> */}
+      <Header lang={lang} setLang={setLang}/>
 
       {/* Hero */}
       <Section id="home" className="relative overflow-hidden">
@@ -167,11 +168,13 @@ export default function Landing() {
                 <h3 className="text-lg font-semibold">{s.title}</h3>
                 <p className="mt-2 text-slate-600">{s.desc}</p>
                 <div className="mt-4  h-1/2 w-10/12 relative " >
-                  <img
-                    className="rounded-xl"
+                  <Image
+                    className="w-full max-w-xs sm:max-w-md h-auto mx-auto"
                     src={s.src} alt="Logo"
+                    width={120}
+                    height={120}
                     style={{ position: 'relative' }}
-                  ></img>
+                  ></Image>
                 </div>
               </div>
             </motion.div>
@@ -207,7 +210,7 @@ export default function Landing() {
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
             <div className=" h-auto w-auto relative aspect-[2/2] rounded-3xl  flex items-center justify-center">
-              <Image className="rounded-2xl"
+              <Image className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
                 src={"/images/Dist.png"} alt="Logo"
                 width={500}
                 height={600}
@@ -256,30 +259,6 @@ export default function Landing() {
       </Section>
 
       {/* Contacto */}
-      {/*
-      <Section id="contacto" title={t.contact.title} subtitle={t.contact.subtitle} muted>
-        <div className="grid lg:grid-cols-2 gap-10">
-          <form onSubmit={onSubmit} className="space-y-5">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <input name="nombre" value={form.nombre} onChange={onChange} placeholder={t.contact.name} required className="rounded-xl border border-slate-300 p-3 bg-white" />
-              <input name="telefono" value={form.telefono} onChange={onChange} placeholder={t.contact.phone} required className="rounded-xl border border-slate-300 p-3 bg-white" />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-            <input type="email" name="email" value={form.email} onChange={onChange} placeholder={t.contact.email} required className="rounded-xl border border-slate-300 p-3 bg-white" />
-              <select name="servicio" value={form.servicio} onChange={onChange} className="rounded-xl border border-slate-300 p-3 bg-white">
-                {t.contact.services.map((s) => <option key={s}>{s}</option>)}
-              </select>
-            </div>
-            <div className="grid grid-cols-1 gap-4">
-              <textarea name="comentarios" value={form.comentarios} onChange={onChange} placeholder={t.contact.comments} rows={4} className="rounded-xl border border-slate-300 p-3 bg-white" />
-              <button type="submit" className="btn btn-primary rounded-2xl">{t.contact.send}</button>
-              {sent && <p className="text-sm text-green-600 mt-2">{t.contact.thanks}</p>}
-            </div>
-          </form>
-
-        </div>
-      </Section> */}
-
       <Section id="contacto" title={t.contact.title} subtitle={t.contact.subtitle} muted >
         <div className="grid lg:grid-cols-2 gap-10">
           <form onSubmit={handleSubmit} className="space-y-5">
