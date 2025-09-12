@@ -1,5 +1,6 @@
 
 export const translations = {
+  
   es: {
     nav: { services: "Servicios", benefits: "Beneficios", why: "¿Por qué elegirnos?", testimonials: "Testimonios", contact: "Contacto" },
     hero: {
@@ -13,7 +14,12 @@ export const translations = {
       title: "Servicios",
       subtitle: "Soluciones integrales: alarmas, videovigilancia, alertas y control de acceso.",
       items: [
-        { title: "Alarmas inteligentes", desc: "Detección precisa de intrusos con sensores y alertas en tiempo real.", src:'/srv/Devices.jpg'},
+        { 
+          title: "Alarmas inteligentes", 
+          desc: "Detección precisa de intrusos con sensores y alertas en tiempo real.", 
+          srcLight: "/srv/DevicesBlack.png",
+          srcDark: "/srv/DevicesWhite.png"
+        },
         { title: "Videovigilancia HD", desc: "Imágenes nítidas, visión nocturna y acceso remoto desde cualquier lugar.", src:'/srv/Bulletcam.png' },
         { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa.", src:"/srv/alert.gif" },
         { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas.", src:"/srv/acces.jpg" }

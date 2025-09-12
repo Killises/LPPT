@@ -1,6 +1,7 @@
 
 "use client";
-import { useState } from "react";
+import { useState, useEffect} from "react";
+import { useTheme } from "./ThemeProvider";
 import { motion } from "framer-motion";
 import Section from "./Section";
 import { translations } from "../data/translations";
@@ -12,8 +13,10 @@ import { useForm, ValidationError } from '@formspree/react';
 
 export default function Landing() {
 
+
   const [lang, setLang] = useState("es");
   const t = translations[lang];
+  const { darkMode } = useTheme();
 
 
 
@@ -95,7 +98,7 @@ export default function Landing() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800">
+    <div className="bg min-h-screen bg-gradient-to-b text-slate-800">
 
       <Header lang={lang} setLang={setLang} />
       <Hero lang={lang}/>
@@ -108,7 +111,7 @@ export default function Landing() {
             <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35 }} className="card">
               <div className="card-body">
                 <h3 className="font-semibold text-lg">{b.title}</h3>
-                <p className="mt-2 text-sm text-slate-700">{b.desc}</p>
+                <p className="mt-2 text-sm text-slate-700 dark:text-slate-200">{b.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -119,9 +122,9 @@ export default function Landing() {
       <Section id="elegirnos">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl font-bold">{t.why.title}</h2>
-            <p className="mt-3 text-slate-600">{t.why.subtitle}</p>
-            <ul className="mt-6 space-y-3 text-slate-700">
+            <h2 className="text-3xl font-bold dark:text-slate-100">{t.why.title}</h2>
+            <p className="mt-3 text-slate-600 dark:text-slate-200">{t.why.subtitle}</p>
+            <ul className="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
               {t.why.bullets.map((b, i) => (
                 <li key={i} className="flex items-start gap-3"><span className=" li mt-2 w-2 h-2 rounded-full" />{b}</li>
               ))}
@@ -130,7 +133,7 @@ export default function Landing() {
           <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
             <div className=" h-auto w-auto relative aspect-[2/2] rounded-3xl  flex items-center justify-center">
               <Image className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
-                src={"/images/Dist.png"} alt="Logo"
+                src={darkMode ? "/images/DistB.png":"/images/Dist.png"} alt="Logo"
                 width={500}
                 height={600}
               >
@@ -147,8 +150,8 @@ export default function Landing() {
           {t.testimonials.items.map((x, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
               <div className="card-body">
-                <p className="text-slate-700">“{x.text}”</p>
-                <p className="mt-4 text-sm text-slate-500">— {x.author}</p>
+                <p className="text-slate-700 dark:text-slate-300">“{x.text}”</p>
+                <p className="mt-4 text-sm text-slate-500 dark:text-slate-100">— {x.author}</p>
                 <div className="mt-4  relative justify-items-center" >
                   <img className="h-auto w-1/3 "
                     src={x.src}
@@ -169,7 +172,7 @@ export default function Landing() {
               <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card">
                 <div className="card-body">
                   <h3 className="font-semibold">{s.t}</h3>
-                  <p className="text-sm text-slate-600 mt-1">{s.d}</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-200 mt-1">{s.d}</p>
                 </div>
               </motion.div>
             </div>
@@ -189,7 +192,7 @@ export default function Landing() {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.name ? "border-red-500" : "border-gray-300"}`}
+                className={`rounded-xl border dark:text-slate-900 dark:bg-slate-200 border-slate-300 p-3 bg-white ${errors.name ? "border-red-500" : "border-gray-300"}`}
               />
               {errors.name && (
                 <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -201,7 +204,7 @@ export default function Landing() {
                 value={form.phone}
                 onChange={handleChange}
                 required
-                className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.phone ? "border-red-500" : "border-gray-300"
+                className={`dark:text-slate-900 rounded-xl border dark:bg-slate-200 border-slate-300 p-3 bg-white ${errors.phone ? "border-red-500" : "border-gray-300"
                   }`}
               />
               {errors.phone && (
@@ -215,7 +218,7 @@ export default function Landing() {
                 placeholder={t.contact.email}
                 value={form.email}
                 onChange={handleChange}
-                className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.email ? "border-red-500" : "border-gray-300"
+                className={`rounded-xl border dark:bg-slate-200 border-slate-300 p-3 bg-white ${errors.email ? "border-red-500" : "border-gray-300"
                   }`}
               />
               {errors.email && (
@@ -225,7 +228,7 @@ export default function Landing() {
                 name="servicio"
                 value={form.servicio}
                 onChange={handleChange}
-                className="rounded-xl border border-slate-300 p-3 bg-white">
+                className="rounded-xl border dark:bg-slate-200 border-slate-300 p-3 bg-white">
                 {t.contact.services.map((s) => <option key={s}>{s}</option>)}
               </select>
             </div>
@@ -236,7 +239,7 @@ export default function Landing() {
                 value={form.message}
                 onChange={handleChange}
                 rows={4}
-                className={`rounded-xl border border-slate-300 p-3 bg-white ${errors.message ? "border-red-500" : "border-gray-300"
+                className={`rounded-xl border dark:bg-slate-200 border-slate-300 p-3 bg-white ${errors.message ? "border-red-500" : "border-gray-300"
                   }`}
               />
               {errors.message && (
@@ -249,7 +252,7 @@ export default function Landing() {
           <div id='contactoDirecto' className="card">
             <div className="card-body">
               <h3 className="text-xl font-semibold">Contacto directo</h3>
-              <ul className="mt-4 space-y-3 text-slate-700">
+              <ul className="mt-4 space-y-3 text-slate-700 dark:text-slate-200">
                 <li className="flex items-center gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone w-5 h-5" aria-hidden="true" data-source-pos="263:54-263:82" data-source-name="Phone">
                     <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
@@ -271,7 +274,7 @@ export default function Landing() {
                   </svg>
                   Santiago de Querétaro, Qro.</li>
               </ul>
-              <div className=" mt-6 aspect-video rounded-2xl bg-slate-200/60 border border-slate-200 shadow-inner flex items-center justify-center p-0">
+              <div id="maps" className=" mt-6 aspect-video rounded-2xl  shadow-inner flex items-center justify-center p-0">
                 <iframe
                   className="rounded-2xl"
                   width="100%"
@@ -288,13 +291,13 @@ export default function Landing() {
 
 
       {/* Footer */}
-      <footer className="py-3 border-t">
-        <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-500">© {new Date().getFullYear()} Protección Total. {t.footer.rights}</p>
-          <nav className="flex gap-5 text-sm text-slate-600">
-            <a href="#" className="hover:text-slate-900">Inicio</a>
-            <a href="#servicios" className="hover:text-slate-900">{t.nav.services}</a>
-            <a href="#contacto" className="hover:text-slate-900">{t.nav.contact}</a>
+      <footer className="py-3 border-t dark:border-slate-700">
+        <div className="container flex flex-col md:flex-row items-center justify-between gap-4 ">
+          <p className="text-sm text-slate-500 dark:text-slate-100">© {new Date().getFullYear()} Protección Total. {t.footer.rights}</p>
+          <nav className="flex gap-5 text-sm text-slate-600 dark:text-slate-100">
+            <a href="#" className="hover:text-slate-900 dark:hover:text-slate-400">Inicio</a>
+            <a href="#servicios" className="hover:text-slate-900 dark:hover:text-slate-400">{t.nav.services}</a>
+            <a href="#contacto" className="hover:text-slate-900 dark:hover:text-slate-400">{t.nav.contact}</a>
           </nav>
         </div>
       </footer>

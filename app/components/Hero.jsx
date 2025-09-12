@@ -10,21 +10,21 @@ export default function Hero({lang}) {
 
 
   return (
-    <Section id="home" className="relative overflow-hidden">
+    <Section id="home" className=" bg relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-100 via-white to-white" />
       <div className="container py-20 grid lg:grid-cols-2 gap-10 items-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.0 }}>
           <div className="flex flex-wrap gap-2">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-              {t.hero.title.split(' ').slice(0, 3).join(' ')} <span className="text-red-700">{t.hero.title.split(' ').slice(3).join(' ')}</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight dark:text-slate-100">
+              {t.hero.title.split(' ').slice(0, 3).join(' ')} <span className="text-red-600 dark:text-red-700">{t.hero.title.split(' ').slice(3).join(' ')}</span>
             </h1>
-            <p className="mt-4 text-lg text-slate-600">{t.hero.subtitle}</p>
+            <p className="mt-4 text-lg text-slate-600 dark:text-slate-100">{t.hero.subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#contacto" className="btn btn-primary rounded-2xl">{t.hero.cta1}</a>
             </div>
-            <ul className="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600">
+            <ul className="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600 dark:text-slate-100">
               {t.hero.bullets.map((b, i) => (
-                <li key={i} className="badge"><span className="p-1 rounded-full bg-red-700" />{b}</li>
+                <li key={i} className="badge"><span className="p-1 rounded-full li " />{b}</li>
               ))}
             </ul>
           </div>

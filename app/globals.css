@@ -17,20 +17,26 @@ html, body {
   @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold shadow-sm transition;
 }
 .btn-primary {
-  @apply bg-red-700 text-white hover:bg-red-600;
+  @apply bg-red-700 text-white hover:bg-red-600 dark:bg-red-700 dark:hover:bg-red-800;
 }
 .btn-outline {
   @apply border border-slate-400 hover:bg-slate-200;
 }
 .card {
-  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  @apply rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 dark:text-slate-50 shadow-sm;
 }
 .card-body {
   @apply p-6;
 }
 .badge {
-  @apply inline-flex items-center gap-2 text-sm text-slate-600;
+  @apply inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-100;
 }
 .li {
   @apply bg-red-700
+}
+.a{
+  @apply dark:text-gray-50 dark:hover:text-gray-400
+}
+.bg{
+  @apply bg-slate-100 dark:bg-slate-950
 }
