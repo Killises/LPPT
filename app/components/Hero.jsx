@@ -10,8 +10,8 @@ export default function Hero({lang}) {
 
 
   return (
-    <Section id="home" className=" bg relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-100 via-white to-white" />
+    <div id="home" className=" relative overflow-hidden dark:bg-slate-800 ">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-100 via-white to-white dark:bg-slate-800" />
       <div className="container py-20 grid lg:grid-cols-2 gap-10 items-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.0 }}>
           <div className="flex flex-wrap gap-2">
@@ -41,6 +41,6 @@ export default function Hero({lang}) {
           </div>
         </motion.div>
       </div>
-    </Section>
+    </div>
   );
 }

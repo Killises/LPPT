@@ -16,7 +16,7 @@ export default function Services({lang}) {
 
   return(
 
-    <Section id="servicios" title={t.services.title} subtitle={t.services.subtitle}>
+    <Section id="servicios" title={t.services.title} subtitle={t.services.subtitle} className="dark:bg-slate-800">
         <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid md:grid-cols-2 gap-6">
           {t.services.items.map((s, i) => (
             <motion.div variants={item} key={i} className="card">

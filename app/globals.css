@@ -31,6 +31,7 @@ html, body {
 .badge {
   @apply inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-100;
 }
+
 .li {
   @apply bg-red-700
 }
@@ -38,5 +39,5 @@ html, body {
   @apply dark:text-gray-50 dark:hover:text-gray-400
 }
 .bg{
-  @apply bg-slate-100 dark:bg-slate-950
+  @apply bg-slate-100 dark:bg-slate-900
 }

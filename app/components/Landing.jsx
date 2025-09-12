@@ -98,7 +98,7 @@ export default function Landing() {
   };
 
   return (
-    <div className="bg min-h-screen bg-gradient-to-b text-slate-800">
+    <div className="bg min-h-screen bg-gradient-to-b text-slate-900">
 
       <Header lang={lang} setLang={setLang} />
       <Hero lang={lang}/>
