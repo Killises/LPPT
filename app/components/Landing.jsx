@@ -253,26 +253,25 @@ export default function Landing() {
             <div className="card-body">
               <h3 className="text-xl font-semibold">Contacto directo</h3>
               <ul className="mt-4 space-y-3 text-slate-700 dark:text-slate-200">
+                <li className="flex items-center gap-3" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+</svg>
+
+                  <a href="https://api.whatsapp.com/send/?phone=%2B524426298541&text&type=phone_number&app_absent=0">+52 442 629 8541</a></li>
                 <li className="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone w-5 h-5" aria-hidden="true" data-source-pos="263:54-263:82" data-source-name="Phone">
-                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
-                    </path>
-                  </svg>
-                  +52 442 629 8541</li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+</svg>
+
+                  <a href="mailto:contacto@protecciontotal.pro">contacto@protecciontotal.pro</a></li>
                 <li className="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail w-5 h-5" aria-hidden="true" data-source-pos="264:54-264:81" data-source-name="Mail">
-                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7">
-                    </path>
-                    <rect x="2" y="4" width="20" height="16" rx="2">
-                    </rect>
-                  </svg>
-                  contacto@protecciontotal.pro</li>
-                <li className="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pin w-5 h-5" aria-hidden="true" data-source-pos="265:54-265:83" data-source-name="MapPin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                    <circle cx="12" cy="10" r="3">
-                    </circle>
-                  </svg>
-                  Santiago de Querétaro, Qro.</li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+</svg>
+
+Benito Juárez 100, José María Arteaga, 76136 Santiago de Querétaro, Qro.</li>
               </ul>
               <div id="maps" className=" mt-6 aspect-video rounded-2xl  shadow-inner flex items-center justify-center p-0">
                 <iframe
