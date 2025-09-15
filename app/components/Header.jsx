@@ -30,38 +30,43 @@ export default function Header({ lang, setLang }) {
           />
         {/* Menú en escritorio */}
         <nav className="hidden md:flex items-center gap-6 text-sm ">
-          <a href="#servicios" className="a hover:text-slate-900">{t.nav.services}</a>
-          <a href="#beneficios" className="a hover:text-slate-900">{t.nav.benefits}</a>
-          <a href="#elegirnos" className="a hover:text-slate-900">{t.nav.why}</a>
-          <a href="#testimonios" className=" a hover:text-red-700">{t.nav.testimonials}</a>
-          <a href="#contacto" className="a hover:text-slate-950">{t.nav.contact}</a>
+          <a href="#servicios" className="a ">{t.nav.services}</a>
+          <a href="#beneficios" className="a">{t.nav.benefits}</a>
+          <a href="#elegirnos" className="a ">{t.nav.why}</a>
+          <a href="#testimonios" className=" a ">{t.nav.testimonials}</a>
+          <a href="#contacto" className="a ">{t.nav.contact}</a>
         </nav>
         {/* CTA + Idioma */}
         <div className="flex items-center gap-3">
           <a href="#contacto" className="hidden sm:block">
-            <button className="btn btn-primary rounded-2xl">{t.hero.cta1}</button>
+            <button className="btn btn-primary rounded-lg text-sm ">{t.hero.cta1}</button>
           </a>
-          <LanguageToggle lang={lang} setLang={setLang} />
+          <a className="hidden sm:block">
+          <LanguageToggle lang={lang} setLang={setLang}/>
+          </a>
+          
 
           {/* Botón hamburguesa (solo en móviles) */}
           <button
-            className="md:hidden p-2 rounded-lg border border-slate-200 btn btn-outline bg-white/80 backdrop-blur"
+            className=" btn text-sm md:hidden  border border-slate-200 btn-outline bg-white/80 backdrop-blur"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? (
               // X (cerrar)
-              (<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>)
+              (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+              )
             ) : (
               // Icono hamburguesa
-              (<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>)
+              (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              )
             )}
           </button>
           <div className="flex items-center space-x-4">
-        <ThemeToggle />
+        <a className="hidden sm:block"><ThemeToggle /></a>
       </div>
         </div>
       </div>
@@ -72,14 +77,18 @@ export default function Header({ lang, setLang }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white border-t border-slate-200 flex flex-col items-center gap-4 py-4"
+          className="md:hidden dark:bg-slate-800 bg-slate-50 border-t dark:border-slate-700 border-slate-200 flex flex-col items-center gap-4 py-4"
         >
-          <a href="#servicios" className="hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.services}</a>
-          <a href="#beneficios" className="hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.benefits}</a>
-          <a href="#elegirnos" className="hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.why}</a>
-          <a href="#testimonios" className="hover:text-red-700" onClick={() => setMenuOpen(false)}>{t.nav.testimonials}</a>
-          <a href="#contacto" className="hover:text-slate-950" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
-          <LanguageToggle lang={lang} setLang={setLang} />
+          <a href="#servicios" className="a hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.services}</a>
+          <a href="#beneficios" className="a hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.benefits}</a>
+          <a href="#elegirnos" className="a hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.why}</a>
+          <a href="#testimonios" className="a hover:text-red-700" onClick={() => setMenuOpen(false)}>{t.nav.testimonials}</a>
+          <a href="#contacto" className="a hover:text-slate-950" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
+          <button className="btn btn-primary rounded-lg text-sm ">{t.hero.cta1}</button>
+          <div className="flex gap-4">
+            <LanguageToggle lang={lang} setLang={setLang} />
+          <ThemeToggle />
+          </div>
         </motion.div>
       )}
     </header>

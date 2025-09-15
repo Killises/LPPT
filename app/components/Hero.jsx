@@ -20,7 +20,7 @@ export default function Hero({lang}) {
             </h1>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-100">{t.hero.subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#contacto" className="btn btn-primary rounded-2xl">{t.hero.cta1}</a>
+              <a href="#contacto" className="btn btn-primary rounded-2xl text-lg">{t.hero.cta1}</a>
             </div>
             <ul className="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600 dark:text-slate-100">
               {t.hero.bullets.map((b, i) => (
