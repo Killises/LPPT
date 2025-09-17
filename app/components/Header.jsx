@@ -20,14 +20,14 @@ export default function Header({ lang, setLang }) {
     <header className="bg sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200 dark:border-slate-700 shadow-md">
       <div className="container h-16 flex items-center justify-between">
         {/* Logo */}
-          <Image 
-            src={darkMode ? "/images/darkLogo.png" : "/images/Logo.png"}
-            alt="Logo ProteccionTotal.Pro"
-            href="#home"
-            width={210}
-            height={70}
-            className="w-[150px] h-auto"
-          />
+        <Image
+          src={darkMode ? "/images/darkLogo.png" : "/images/Logo.png"}
+          alt="Logo ProteccionTotal.Pro"
+          href="#home"
+          width={210}
+          height={70}
+          className="w-[150px] h-auto"
+        />
         {/* Menú en escritorio */}
         <nav className="hidden md:flex items-center gap-6 text-sm ">
           <a href="#servicios" className="a ">{t.nav.services}</a>
@@ -38,13 +38,13 @@ export default function Header({ lang, setLang }) {
         </nav>
         {/* CTA + Idioma */}
         <div className="flex items-center gap-3">
-          <a href="#contacto" className="hidden sm:block">
+          <a href="#contacto" className="hidden md:block sm:block">
             <button className="btn btn-primary rounded-lg text-sm ">{t.hero.cta1}</button>
           </a>
-          <a className="hidden sm:block">
-          <LanguageToggle lang={lang} setLang={setLang}/>
+          <a className="hidden md:block sm:block">
+            <LanguageToggle lang={lang} setLang={setLang} />
           </a>
-          
+
 
           {/* Botón hamburguesa (solo en móviles) */}
           <button
@@ -66,8 +66,8 @@ export default function Header({ lang, setLang }) {
             )}
           </button>
           <div className="flex items-center space-x-4">
-        <a className="hidden sm:block"><ThemeToggle /></a>
-      </div>
+            <a className="hidden sm:block"><ThemeToggle /></a>
+          </div>
         </div>
       </div>
       {/* Menú móvil */}
@@ -87,7 +87,7 @@ export default function Header({ lang, setLang }) {
           <button className="btn btn-primary rounded-lg text-sm ">{t.hero.cta1}</button>
           <div className="flex gap-4">
             <LanguageToggle lang={lang} setLang={setLang} />
-          <ThemeToggle />
+            <ThemeToggle />
           </div>
         </motion.div>
       )}

@@ -1,8 +1,12 @@
+import { title } from "framer-motion/client";
 
 export const translations = {
   
   es: {
-    nav: { services: "Servicios", benefits: "Beneficios", why: "¿Por qué elegirnos?", testimonials: "Testimonios", contact: "Contacto" },
+    nav: { home:"inicio", services: "Servicios", benefits: "Beneficios", why: "¿Por qué elegirnos?", testimonials: "Testimonios", contact: "Contacto" },
+    home:{
+      title:"inicio"
+    },
     hero: {
       title: "Protección Total .Pro para tu hogar y negocio",
       subtitle: "Instalamos sistemas de seguridad inteligentes en menos de 24 horas para proteger lo que más valoras.",
@@ -81,60 +85,85 @@ export const translations = {
     footer: { rights: "Todos los derechos reservados." }
   },
   en: {
-    nav: { services: "Services", benefits: "Benefits", why: "Why us?", testimonials: "Testimonials", contact: "Contact" },
+    nav: { home:"Home", services: "Services", benefits: "Benefits", why: "Why choose us?", testimonials: "Testimonials", contact: "Contact" },
+    home:{ 
+      title:"Home"
+    },
     hero: {
-      title: "Total protection for your home and business",
-      subtitle: "We install smart security systems in less than 24 hours to protect what matters most.",
+      title: "Total Protection .Pro for your home and business",
+      subtitle: "We install smart security systems in less than 24 hours to protect what you value most.",
       cta1: "Get a quote",
       cta2: "View services",
-      bullets: ["Install < 24 h", "European technology", "Local support in Querétaro"]
+      bullets: [
+        "Installation in less than 24 hours in Querétaro",
+        "No.1 technology in Europe",
+        "Local service in Querétaro and nationwide support"
+      ]
     },
     services: {
       title: "Services",
-      subtitle: "End-to-end solutions: alarms, video surveillance, alerts and access control.",
+      subtitle: "Comprehensive solutions: alarms, video surveillance, alerts, and access control.",
       items: [
-        { title: "Smart alarms", desc: "Accurate intruder detection with sensors and real-time alerts." },
-        { title: "HD video surveillance", desc: "Crisp images, night vision and remote access from anywhere." },
-        { title: "Instant alerts", desc: "Notifications right away for any suspicious activity." },
-        { title: "Access control", desc: "Manage who enters and leaves with secure, simple solutions." }
+        { 
+          title: "Smart alarms", 
+          desc: "Accurate intruder detection with sensors and real-time alerts.", 
+          srcLight: "/srv/DevicesBlack.png",
+          srcDark: "/srv/DevicesWhite.png"
+        },
+        { title: "HD video surveillance", desc: "Clear images, night vision, and remote access from anywhere.", src:'/srv/Bulletcam.png' },
+        { title: "Instant alerts", desc: "Immediate notifications for any suspicious activity.", src:"/srv/alert.gif" },
+        { title: "Access control", desc: "Manage who enters and leaves with secure and simple solutions.", src:"/srv/acces.jpg" }
       ],
       more: "Learn more"
     },
     benefits: {
       title: "Benefits",
-      subtitle: "The best technology with a local, friendly service.",
+      subtitle: "The best technology with a close, local service.",
       items: [
-        { title: "Express installation", desc: "In Querétaro and nearby areas, your system is ready in under 24 h." },
-        { title: "End-to-end solutions", desc: "Complete protection: alarms, cameras, access control and support." },
-        { title: "Specialized support", desc: "Professional team ensuring your peace of mind." }
+        { title: "Express installation", desc: "In Querétaro and surrounding areas, your system is ready in less than 24 h." },
+        { title: "Comprehensive solutions", desc: "Complete protection: alarms, cameras, access control, and technical support." },
+        { title: "Specialized attention", desc: "A professional team to ensure your peace of mind and security." }
       ]
     },
     why: {
       title: "Why choose us?",
       subtitle: "We combine cutting-edge technology with reliable local service.",
-      bullets: ["Top-seller European tech", "Immediate response", "Tailored to your needs", "Ongoing technical support"]
+      bullets: [
+        "Top-selling European technology",
+        "Immediate response",
+        "Tailored to your needs",
+        "Ongoing technical support"
+      ]
     },
     testimonials: {
       title: "Testimonials",
       subtitle: "Our clients' peace of mind says it all.",
       items: [
-        { author: "Carlos M.", text: "With Ajax I feel safe; I can watch my business from my phone." },
-        { author: "Laura G.", text: "Same-day installation, excellent service!" }
+        { 
+          author: "Carlos M.", 
+          text: "With Ajax I feel safe, I can monitor my business from my phone.", 
+          src: "/inst/anexo4.jpg" 
+        },
+        {
+          author: "Laura G.",
+          text: "They installed it the same day, excellent service!", 
+          src: "/inst/anexo1.jpg"
+        }
       ]
     },
     process: {
       title: "Simple process",
-      subtitle: "From quote to installation in 4 steps.",
+      subtitle: "From quotation to installation in 4 steps.",
       steps: [
         { t: "1. Quote", d: "Online or by phone" },
-        { t: "2. Schedule", d: "Pick date and time" },
-        { t: "3. Configure", d: "Remote access and tests" },
+        { t: "2. Schedule", d: "We pick a date and time" },
+        { t: "3. Configure", d: "Remote access and testing" },
         { t: "4. Enjoy", d: "Peace of mind 24/7" }
       ]
     },
     contact: {
       title: "Request your quote",
-      subtitle: "No strings attached. Fast response from our team.",
+      subtitle: "No commitment. Quick response from our team.",
       name: "Full name",
       phone: "Phone",
       email: "Email",
@@ -142,7 +171,7 @@ export const translations = {
       services: ["Alarms", "Video surveillance", "Access control", "IT solutions"],
       comments: "Tell us what you need",
       send: "Send request",
-      thanks: "Thanks! We've received your request."
+      thanks: "Thank you! We've received your request."
     },
     footer: { rights: "All rights reserved." }
   }

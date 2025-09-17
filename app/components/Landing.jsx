@@ -1,6 +1,6 @@
 
 "use client";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "./ThemeProvider";
 import { motion } from "framer-motion";
 import Section from "./Section";
@@ -101,9 +101,9 @@ export default function Landing() {
     <div className="bg min-h-screen bg-gradient-to-b text-slate-900">
 
       <Header lang={lang} setLang={setLang} />
-      <Hero lang={lang}/>
-      <Services lang={lang}/>
-      
+      <Hero lang={lang} />
+      <Services lang={lang} />
+
       {/* Beneficios */}
       <Section id="beneficios" title={t.benefits.title} subtitle={t.benefits.subtitle} muted>
         <div className="grid md:grid-cols-3 gap-6">
@@ -133,7 +133,7 @@ export default function Landing() {
           <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
             <div className=" h-auto w-auto relative aspect-[2/2] rounded-3xl  flex items-center justify-center">
               <Image className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
-                src={darkMode ? "/images/DistB.png":"/images/Dist.png"} alt="Logo"
+                src={darkMode ? "/images/DistB.png" : "/images/Dist.png"} alt="Logo"
                 width={500}
                 height={600}
               >
@@ -254,24 +254,24 @@ export default function Landing() {
               <h3 className="text-xl font-semibold">Contacto directo</h3>
               <ul className="mt-4 space-y-3 text-slate-700 dark:text-slate-200">
                 <li className="flex items-center gap-3" >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-</svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                  </svg>
 
                   <a href="https://api.whatsapp.com/send/?phone=%2B524426298541&text&type=phone_number&app_absent=0">+52 442 629 8541</a></li>
                 <li className="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-</svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                  </svg>
 
                   <a href="mailto:contacto@protecciontotal.pro">contacto@protecciontotal.pro</a></li>
                 <li className="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-</svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
 
-Benito Juárez 100, José María Arteaga, 76136 Santiago de Querétaro, Qro.</li>
+                  Benito Juárez 100, José María Arteaga, 76136 Santiago de Querétaro, Qro.</li>
               </ul>
               <div id="maps" className=" mt-6 aspect-video rounded-2xl  shadow-inner flex items-center justify-center p-0">
                 <iframe
@@ -294,7 +294,7 @@ Benito Juárez 100, José María Arteaga, 76136 Santiago de Querétaro, Qro.</li
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 ">
           <p className="text-sm text-slate-500 dark:text-slate-100">© {new Date().getFullYear()} Protección Total. {t.footer.rights}</p>
           <nav className="flex gap-5 text-sm text-slate-600 dark:text-slate-100">
-            <a href="#" className="hover:text-slate-900 dark:hover:text-slate-400">Inicio</a>
+            <a href="#" className="hover:text-slate-900 dark:hover:text-slate-400">{t.nav.home}</a>
             <a href="#servicios" className="hover:text-slate-900 dark:hover:text-slate-400">{t.nav.services}</a>
             <a href="#contacto" className="hover:text-slate-900 dark:hover:text-slate-400">{t.nav.contact}</a>
           </nav>

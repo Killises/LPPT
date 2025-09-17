@@ -5,7 +5,7 @@ import Image from "next/image";
 import { translations } from "../data/translations";
 import Section from "./Section";
 
-export default function Hero({lang}) {
+export default function Hero({ lang }) {
   const t = translations[lang]
 
 
@@ -32,12 +32,12 @@ export default function Hero({lang}) {
         <motion.div initial={{ opacity: 0, scale: 0.60 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1.5 }}>
           <div className="relative aspect-video rounded-3xl flex items-center justify-center">
             <Image className="w-full max-w-xs sm:max-w-md h-auto mx-auto"
-            width={1200}
-            height={600}
-            quality={95}
-            src="/images/Jeweller House.png"
-            sizes="(max-width: 768px) 100vw, 50vw" />
-            
+              width={1200}
+              height={600}
+              quality={95}
+              src="/images/Jeweller House.png"
+              sizes="(max-width: 768px) 100vw, 50vw" />
+
           </div>
         </motion.div>
       </div>
