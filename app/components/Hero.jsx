@@ -13,10 +13,10 @@ export default function Hero({ lang }) {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.0 }}>
             <div className="flex flex-wrap gap-2">
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight dark:text-slate-100">
-                {t.hero.title.split(' ').slice(0, 3).join(' ')}
-                <span className="text-red-600 dark:text-red-700">
-                {t.hero.title.split(' ').slice(3).join(' ')}
-                </span>
+                {t.hero.title}
+              </h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-red-600 dark:text-red-700"> 
+                {t.hero.title2}
               </h1>
               <p className="mt-4 text-lg text-slate-600 dark:text-slate-100">
                 {t.hero.subtitle}
@@ -28,7 +28,7 @@ export default function Hero({ lang }) {
                   {t.hero.cta1}
                 </a>
               </div>
-              <ul className="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600 dark:text-slate-100">
+              <ul className="mt-6 grid sm:grid-cols-3 gap-12 text-sm text-slate-600 dark:text-slate-100">
                 {t.hero.bullets.map((b, i) => (
                       <li key={i} className="badge">
                         <span className="p-1 rounded-full li " />

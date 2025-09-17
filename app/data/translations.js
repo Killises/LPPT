@@ -1,18 +1,27 @@
-import { title } from "framer-motion/client";
-
 export const translations = {
-  
   es: {
-    nav: { home:"inicio", services: "Servicios", benefits: "Beneficios", why: "¿Por qué elegirnos?", testimonials: "Testimonios", contact: "Contacto" },
-    home:{
-      title:"inicio"
+    nav: { 
+      home: "Inicio", 
+      services: "Servicios", 
+      benefits: "Beneficios", 
+      why: "¿Por qué elegirnos?", 
+      testimonials: "Testimonios", 
+      contact: "Contacto" 
+    },
+    home: {
+      title: "Inicio"
     },
     hero: {
-      title: "Protección Total .Pro para tu hogar y negocio",
+      title: "Protección Total .Pro",
+      title2: "para tu hogar y negocio",
       subtitle: "Instalamos sistemas de seguridad inteligentes en menos de 24 horas para proteger lo que más valoras.",
-      cta1: "Cotiza ahora",
-      cta2: "Ver servicios",
-      bullets: ["Instalación en menos de 24 horas en Querétaro", "Tecnología No.1 en europa", "Atención local en Querétaro y soporte nacional"]
+      cta1: "Solicita tu cotización",
+      cta2: "Descubre nuestros servicios",
+      bullets: [
+        "Instalación en menos de 24 horas en Querétaro",
+        "Tecnología No. 1 en europa",
+        "Atención local en Querétaro, soporte nacional"
+      ]
     },
     services: {
       title: "Servicios",
@@ -32,17 +41,22 @@ export const translations = {
     },
     benefits: {
       title: "Beneficios",
-      subtitle: "Lo mejor de la tecnología con un servicio local y cercano.",
+      subtitle: "Tecnología avanzada con un servicio cercano y confiable.",
       items: [
         { title: "Instalación exprés", desc: "En Querétaro y alrededores, tu sistema queda listo en menos de 24 h." },
-        { title: "Soluciones integrales", desc: "Protección completa: alarmas, cámaras, control de acceso y soporte técnico." },
-        { title: "Atención especializada", desc: "Equipo profesional para garantizar tu tranquilidad y seguridad." }
+        { title: "Protección integral", desc: "Alarmas, cámaras, control de acceso y soporte técnico en una sola solución." },
+        { title: "Atención personalizada", desc: "Un equipo profesional dedicado a tu tranquilidad y seguridad." }
       ]
     },
     why: {
       title: "¿Por qué elegirnos?",
       subtitle: "Combinamos tecnología de última generación con un servicio local confiable.",
-      bullets: ["Tecnología europea top seller", "Respuesta inmediata", "Personalización según tus necesidades", "Soporte técnico continuo"]
+      bullets: [
+        "Tecnología europea top seller", 
+        "Respuesta inmediata", 
+        "Personalización según tus necesidades", 
+        "Soporte técnico continuo"
+      ]
     },
     testimonials: {
       title: "Testimonios",
@@ -85,24 +99,32 @@ export const translations = {
     footer: { rights: "Todos los derechos reservados." }
   },
   en: {
-    nav: { home:"Home", services: "Services", benefits: "Benefits", why: "Why choose us?", testimonials: "Testimonials", contact: "Contact" },
-    home:{ 
-      title:"Home"
+    nav: { 
+      home: "Home", 
+      services: "Services", 
+      benefits: "Benefits", 
+      why: "Why choose us?", 
+      testimonials: "Testimonials", 
+      contact: "Contact" 
+    },
+    home: { 
+      title: "Home"
     },
     hero: {
-      title: "Proteccion Total .Pro for your home and business",
-      subtitle: "We install smart security systems in less than 24 hours to protect what you value most.",
-      cta1: "Get a quote",
-      cta2: "View services",
+      title: "Proteccion Total .Pro",
+      title2: "for your home and business",
+      subtitle: "We install smart security systems in under 24 hours to protect what matters most.",
+      cta1: "Request a quote",
+      cta2: "Explore our services",
       bullets: [
-        "Installation in less than 24 hours in Querétaro",
-        "No.1 technology in Europe",
-        "Local service in Querétaro and nationwide support"
+        "Installation in under 24 hours in Querétaro",
+        "No. 1 technology in europe",
+        "Local service in Querétaro with nationwide support"
       ]
     },
     services: {
       title: "Services",
-      subtitle: "Comprehensive solutions: alarms, video surveillance, alerts, and access control.",
+      subtitle: "Comprehensive solutions: alarms, video surveillance, instant alerts, and access control.",
       items: [
         { 
           title: "Smart alarms", 
@@ -118,20 +140,20 @@ export const translations = {
     },
     benefits: {
       title: "Benefits",
-      subtitle: "The best technology with a close, local service.",
+      subtitle: "Cutting-edge technology with friendly, reliable service.",
       items: [
-        { title: "Express installation", desc: "In Querétaro and surrounding areas, your system is ready in less than 24 h." },
-        { title: "Comprehensive solutions", desc: "Complete protection: alarms, cameras, access control, and technical support." },
-        { title: "Specialized attention", desc: "A professional team to ensure your peace of mind and security." }
+        { title: "Express installation", desc: "In Querétaro and nearby areas, your system is ready in under 24 h." },
+        { title: "Integrated protection", desc: "Alarms, cameras, access control, and tech support in one solution." },
+        { title: "Personalized support", desc: "A professional team dedicated to your peace of mind." }
       ]
     },
     why: {
       title: "Why choose us?",
       subtitle: "We combine cutting-edge technology with reliable local service.",
       bullets: [
-        "Top-selling European technology",
-        "Immediate response",
-        "Tailored to your needs",
+        "Top-selling European technology", 
+        "Immediate response", 
+        "Tailored to your needs", 
         "Ongoing technical support"
       ]
     },
