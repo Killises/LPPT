@@ -1,5 +1,4 @@
 "use client"
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { translations } from "../data/translations";
@@ -10,12 +9,10 @@ export default function Services({ lang }) {
 
   const t = translations[lang]
   const { darkMode } = useTheme();
-
   const container = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { staggerChildren: 0.08 } } };
   const item = { hidden: { opacity: 0, y: 15 }, show: { opacity: 1, y: 0 } };
 
   return (
-
     <Section id="servicios" title={t.services.title} subtitle={t.services.subtitle} className="dark:bg-slate-800">
       <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid md:grid-cols-2 gap-6">
         {t.services.items.map((s, i) => (
@@ -40,8 +37,5 @@ export default function Services({ lang }) {
         ))}
       </motion.div>
     </Section>
-
   );
-
-
 }

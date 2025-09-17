@@ -1,4 +1,3 @@
-
 export default function Section({ id, title, subtitle, children, muted = false }) {
   return (
     <section id={id} className={muted ? "py-16 bg-slate-50 dark:bg-slate-800" : "py-16"}>
