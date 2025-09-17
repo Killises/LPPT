@@ -90,7 +90,7 @@ export const translations = {
       title:"Home"
     },
     hero: {
-      title: "Total Protection .Pro for your home and business",
+      title: "Proteccion Total .Pro for your home and business",
       subtitle: "We install smart security systems in less than 24 hours to protect what you value most.",
       cta1: "Get a quote",
       cta2: "View services",
