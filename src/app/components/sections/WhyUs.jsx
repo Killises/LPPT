@@ -11,7 +11,7 @@ export default function WhyUs({ lang }) {
 
   return (
     {/* ¿Por qué elegirnos? */ },
-    <Section id="elegirnos">
+    <Section id="elegirnos" >
       <div className="grid lg:grid-cols-2 gap-10 items-center">
         <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="text-3xl font-bold dark:text-slate-100">{t.why.title}</h2>
