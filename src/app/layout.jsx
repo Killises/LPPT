@@ -6,7 +6,7 @@ const montserrat = Montserrat({ weight: ['100', '200', '300', '400', '500', '600
 
 export const metadata = {
   title: "Protección Total .Pro",
-  description: "Landing page de sistemas de seguridad inteligentes",
+  description: "Descubre Protección Total, tu aliado en seguridad. Instalamos alarmas de seguridad, cámaras y control de accesos en Querétaro en menos de 24 h. Protege tu hogar o negocio con tecnología avanzada.",
   icons: {
     icon: "/srv/favicon.ico",
   },
