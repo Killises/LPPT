@@ -46,7 +46,7 @@ export default function Landing() {
     <div className="w-full md:w-1/2 aspect-video">
       <iframe
         className="w-full h-full rounded-lg shadow-lg"
-        src="https://www.youtube.com/embed/KIIVEtgXPkM?si=mDGSw3nh_IyZ7rdR"
+        src="https://www.youtube.com/embed/iok9x8-iZX0?si=PCi6SaYhYykfgALI"
         title="YouTube video 2"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
