@@ -12,6 +12,20 @@ export const metadata = {
     icon: "/srv/favicon.ico",
   },
   keywords:"alarmas, alarma, queretaro, sistemas de seguridad, Ajax, cámaras de vigilancia, control de accesos, protección de hogares, protección de negocios, seguridad avanzada, soluciones de seguridad, tecnología de seguridad",
+  openGraph: {
+    title: "Protección Total .Pro",
+    description: "Descubre Protección Total, tu aliado en seguridad. Instalamos alarmas de seguridad, cámaras y control de accesos en Querétaro en menos de 24 h. Protege tu hogar o negocio con tecnología avanzada.",
+    url: "protecciontotal.pro",
+    siteName: "Protección Total .Pro",
+    images: [
+      {
+        url: "/images/darkLogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Protección Total .Pro",
+      }
+    ]
+  }
 };
 
 export default function RootLayout({ children }) {
