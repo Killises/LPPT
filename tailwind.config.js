@@ -16,6 +16,7 @@ module.exports = {
           text: "#57585a",   // Texto secundario / íconos
           primary: "#b41c21",    // Botones de acción, alertas
           accent: "#83c040",
+          accentSecondary: "#5b862c",
         }
       }
     },

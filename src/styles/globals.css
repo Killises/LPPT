@@ -20,7 +20,7 @@ html, body {
   @apply bg-brand-primary text-white hover:bg-red-600 dark:bg-brand-primary dark:hover:bg-red-800;
 }
 .btn-secondary {
-  @apply bg-brand-accent text-white hover:bg-red-600 dark:bg-brand-accent dark:hover:bg-red-800;
+  @apply bg-brand-accent text-white hover:bg-brand-accentSecondary dark:bg-brand-accent dark:hover:bg-brand-accentSecondary;
 }
 .btn-outline {
   @apply border border-slate-400 hover:bg-slate-300 dark:hover:bg-slate-700;
