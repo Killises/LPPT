@@ -11,7 +11,7 @@ export const metadata = {
   icons: {
     icon: "/srv/favicon.ico",
   },
-  keywords:"alarmas, alarma, queretaro, sistemas de seguridad, Ajax, cámaras de vigilancia, control de accesos, protección de hogares, protección de negocios, seguridad avanzada, soluciones de seguridad, tecnología de seguridad",
+  keywords: "alarmas, alarma, queretaro, sistemas de seguridad, Ajax, cámaras de vigilancia, control de accesos, protección de hogares, protección de negocios, seguridad avanzada, soluciones de seguridad, tecnología de seguridad",
   openGraph: {
     title: "Protección Total .Pro",
     description: "Descubre Protección Total, tu aliado en seguridad. Instalamos alarmas de seguridad, cámaras y control de accesos en Querétaro en menos de 24 h. Protege tu hogar o negocio con tecnología avanzada.",
@@ -28,9 +28,20 @@ export const metadata = {
   }
 };
 
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={montserrat.className}>
+      {/* <!-- Google tag (gtag.js) --> */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXNKQF79VR"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'G-QXNKQF79VR');
+      </script>
       <body>
         <ThemeProvider>
           {children}
