@@ -14,10 +14,13 @@ html, body {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 .btn {
-  @apply inline-flex p-2 items-center justify-center rounded-lg  font-semibold shadow-sm transition border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200;
+  @apply inline-flex p-2 items-center justify-center rounded-lg  font-semibold shadow-sm transition border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-brand-backgroundSecondary text-gray-800 dark:text-gray-200;
 }
 .btn-primary {
   @apply bg-brand-primary text-white hover:bg-red-600 dark:bg-brand-primary dark:hover:bg-red-800;
+}
+.btn-secondary {
+  @apply bg-brand-accent text-white hover:bg-red-600 dark:bg-brand-accent dark:hover:bg-red-800;
 }
 .btn-outline {
   @apply border border-slate-400 hover:bg-slate-300 dark:hover:bg-slate-700;
@@ -31,6 +34,9 @@ html, body {
 .card-body {
   @apply p-6;
 }
+.card-body-rewards {
+  @apply p-6; min-height: 360px;
+}
 .badge {
   @apply inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-100;
 }
@@ -39,7 +45,7 @@ html, body {
   @apply bg-brand-accent
 }
 .a{
-  @apply hover:text-slate-600  dark:text-gray-50 dark:hover:text-gray-400
+  @apply hover:text-brand-text  dark:text-gray-50 dark:hover:text-gray-400
 }
 .bg{
   @apply bg-slate-100 dark:bg-brand-backgroud

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { translations } from "../../../translations/translations";
-import Section2 from "../Section2";
+import Section from "../Section";
 
 export default function Contact({ lang }) {
   const t = translations[lang]
@@ -86,7 +86,7 @@ export default function Contact({ lang }) {
   return (
 
     {/* Contacto */ },
-    <Section2 id="contacto" title={t.contact.title} subtitle={t.contact.subtitle} muted >
+    <Section id="contacto" title={t.contact.title} subtitle={t.contact.subtitle} muted >
       <div className="grid lg:grid-cols-2 gap-10">
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid sm:grid-cols-2 gap-4">
@@ -154,7 +154,7 @@ export default function Contact({ lang }) {
           </div>
           <p className="text-center text-sm mt-2">{status}</p>
         </form>
-        <div id='contactoDirecto' className="card-section bg-brand-backgroundSecondary">
+        <div id='contactoDirecto' className="card bg-brand-backgroundSecondary">
           <div className="card-body">
             <h3 className="text-xl font-semibold">Contacto directo</h3>
             <ul className="mt-4 space-y-3 text-slate-700 dark:text-slate-200">
@@ -187,6 +187,6 @@ export default function Contact({ lang }) {
           </div>
         </div>
       </div>
-    </Section2>
+    </Section>
   );
 }

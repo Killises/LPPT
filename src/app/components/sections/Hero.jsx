@@ -12,10 +12,10 @@ export default function Hero({ lang }) {
         <div className="container py-20 grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.0 }}>
             <div className="flex flex-wrap gap-2">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight dark:text-slate-100">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight dark:text-slate-50">
                 {t.hero.title}
               </h1>
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-red-600 dark:text-red-700"> 
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-primary dark:text-brand-primary"> 
                 {t.hero.title2}
               </h1>
               <p className="mt-4 text-lg text-slate-600 dark:text-slate-100">

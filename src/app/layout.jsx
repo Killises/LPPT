@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Montserrat } from 'next/font/google'
 import { ThemeProvider } from '../context/ThemeProvider';
 
+
 const montserrat = Montserrat({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['latin'] })
 
 export const metadata = {
@@ -10,6 +11,7 @@ export const metadata = {
   icons: {
     icon: "/srv/favicon.ico",
   },
+  keywords:"alarmas, alarma, queretaro, sistemas de seguridad, Ajax, cámaras de vigilancia, control de accesos, protección de hogares, protección de negocios, seguridad avanzada, soluciones de seguridad, tecnología de seguridad",
 };
 
 export default function RootLayout({ children }) {

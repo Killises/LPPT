@@ -97,7 +97,7 @@ export default function Header({ lang, setLang }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden dark:bg-slate-800 bg-slate-50 border-t dark:border-slate-700 border-slate-200 flex flex-col items-center gap-4 py-4">
+          className="md:hidden dark:bg-brand-backgroud bg-slate-50 border-t dark:border-slate-700 border-slate-200 flex flex-col items-center gap-4 py-4">
           <a href="#servicios" className="a hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.services}</a>
           <a href="#beneficios" className="a hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.benefits}</a>
           <a href="#elegirnos" className="a hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.why}</a>

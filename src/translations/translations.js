@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const translations = {
   es: {
     nav: { 
@@ -97,6 +99,40 @@ export const translations = {
       comments: "Cuéntanos qué necesitas",
       send: "Enviar solicitud",
       thanks: "¡Gracias! Hemos recibido tu solicitud."
+    },
+    videos: {
+      title: "Mira cómo funciona"
+    },
+    premios:{
+    title: "Premios",
+      subtitle: "Conoce los reconocimientos que han obtenido los sistemas de seguridad Ajax",
+      items: [
+        { 
+          title: "Red Dot Winner 2024", 
+          desc: "Ajax Systems gana su primer premio Red Dot Award por tres productos de seguridad y de domótica", 
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Freddot_switch_ab76b6f4e3%401.png&1715325401",
+          href:"https://ajax.systems/es/blog/ajax-systems-won-red-dot-award/",
+        },
+        { 
+          title: "Security Awards 2024", 
+          desc: "Ajax Systems gana el premio Security Awards 2024 como Mejor fabricante de equipamiento de seguridad domótica", 
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FCorporate_Vision_2024_preview_2x_462e208450%401.jpg&1714866025",
+          href:"https://ajax.systems/es/blog/security-awards-2024/",
+        },
+        { 
+          title: "GIT Security Award 2024", 
+          desc: "FireProtect 2 reconocido con el honorable premio GIT Security Award 2024", 
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FWGIT_Security_awards_2023_preview_2x_7a943fadfd%401.png&1714864288",
+          href:"https://ajax.systems/es/blog/fireprotect-2-security-award-2024/",
+        },
+        { 
+          title: "Australian Security Industry Awards 2023", 
+          desc: "MotionCam (PhOD) y MotionCam Outdoor (PhOD) ganan los Australian Security Industry Awards 2023", 
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FASIAL_Awards_2023_preview_2x_7478b4dbc4%401.png&1714864570",
+          href:"https://ajax.systems/es/blog/australian-security-industry-awards-2023/",
+        },
+      ],
+      more: "Conoce más"
     },
     footer: { rights: "Todos los derechos reservados." }
   },
