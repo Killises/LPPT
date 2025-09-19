@@ -19,7 +19,7 @@ export const metadata = {
     siteName: "Protección Total .Pro",
     images: [
       {
-        url: "/images/darkLogo.png",
+        url: "/images/Logo.png",
         width: 1200,
         height: 630,
         alt: "Protección Total .Pro",
