@@ -19,7 +19,7 @@ export const metadata = {
     siteName: "Protección Total .Pro",
     images: [
       {
-        url: "/images/Logo.png",
+        url: "/images/OGLogo.png",
         width: 1200,
         height: 630,
         alt: "Protección Total .Pro",
@@ -33,15 +33,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={montserrat.className}>
-      {/* <!-- Google tag (gtag.js) --> */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXNKQF79VR"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
-
-        gtag('config', 'G-QXNKQF79VR');
-      </script>
       <body>
         <ThemeProvider>
           {children}

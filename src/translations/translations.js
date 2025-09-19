@@ -1,14 +1,13 @@
-import { title } from "process";
-
 export const translations = {
   es: {
-    nav: { 
-      home: "Inicio", 
-      services: "Servicios", 
-      benefits: "Beneficios", 
-      why: "¿Por qué elegirnos?", 
-      testimonials: "Testimonios", 
-      contact: "Contacto" 
+    nav: {
+      home: "Inicio",
+      services: "Servicios",
+      benefits: "Beneficios",
+      why: "¿Por qué elegirnos?",
+      testimonials: "Testimonios",
+      contact: "Contacto",
+      premios: "Premios"
     },
     home: {
       title: "Inicio"
@@ -29,15 +28,15 @@ export const translations = {
       title: "Servicios",
       subtitle: "Soluciones integrales: alarmas, videovigilancia, alertas y control de acceso.",
       items: [
-        { 
-          title: "Alarmas inteligentes", 
-          desc: "Detección precisa de intrusos con sensores y alertas en tiempo real.", 
+        {
+          title: "Alarmas inteligentes",
+          desc: "Detección precisa de intrusos con sensores y alertas en tiempo real.",
           srcLight: "/srv/DevicesBlack.png",
           srcDark: "/srv/DevicesWhite.png"
         },
-        { title: "Videovigilancia HD", desc: "Imágenes nítidas, visión nocturna y acceso remoto desde cualquier lugar.", src:'/srv/Bulletcam.png' },
-        { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa.", src:"/srv/alert.gif" },
-        { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas.", src:"/srv/acces.jpg" }
+        { title: "Videovigilancia HD", desc: "Imágenes nítidas, visión nocturna y acceso remoto desde cualquier lugar.", src: '/srv/Bulletcam.png' },
+        { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa.", src: "/srv/alert.gif" },
+        { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas.", src: "/srv/acces.jpg" }
       ],
       more: "Conoce más"
     },
@@ -54,9 +53,9 @@ export const translations = {
       title: "¿Por qué elegirnos?",
       subtitle: "Combinamos tecnología de última generación con un servicio local confiable.",
       bullets: [
-        "Tecnología europea top seller", 
-        "Respuesta inmediata", 
-        "Personalización según tus necesidades", 
+        "Tecnología europea top seller",
+        "Respuesta inmediata",
+        "Personalización según tus necesidades",
         "Soporte técnico continuo"
       ],
       srcLight: "/images/DistB.png",
@@ -66,14 +65,14 @@ export const translations = {
       title: "Testimonios",
       subtitle: "La tranquilidad de nuestros clientes lo dice todo.",
       items: [
-        { 
-          author: "Carlos M.", 
-          text: "Con Ajax me siento tranquilo, puedo ver mi negocio desde el celular.", 
-          src: "/inst/anexo4.jpg" 
+        {
+          author: "Carlos M.",
+          text: "Con Ajax me siento tranquilo, puedo ver mi negocio desde el celular.",
+          src: "/inst/anexo4.jpg"
         },
         {
           author: "Laura G.",
-          text: "Instalaron en el mismo día, ¡excelente servicio!", 
+          text: "Instalaron en el mismo día, ¡excelente servicio!",
           src: "/inst/anexo1.jpg"
         }
       ]
@@ -88,6 +87,40 @@ export const translations = {
         { t: "4. Disfruta", d: "Tranquilidad 24/7" }
       ]
     },
+    videos: {
+      title: "Mira cómo funciona"
+    },
+    premios: {
+      title: "Premios",
+      subtitle: "Conoce los reconocimientos que han obtenido los sistemas de seguridad Ajax",
+      items: [
+        {
+          title: "Red Dot Winner 2024",
+          desc: "Ajax Systems gana su primer premio Red Dot Award por tres productos de seguridad y de domótica",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Freddot_switch_ab76b6f4e3%401.png&1715325401",
+          href: "https://ajax.systems/es/blog/ajax-systems-won-red-dot-award/",
+        },
+        {
+          title: "Security Awards 2024",
+          desc: "Ajax Systems gana el premio Security Awards 2024 como Mejor fabricante de equipamiento de seguridad domótica",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FCorporate_Vision_2024_preview_2x_462e208450%401.jpg&1714866025",
+          href: "https://ajax.systems/es/blog/security-awards-2024/",
+        },
+        {
+          title: "GIT Security Award 2024",
+          desc: "FireProtect 2 reconocido con el honorable premio GIT Security Award 2024",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FWGIT_Security_awards_2023_preview_2x_7a943fadfd%401.png&1714864288",
+          href: "https://ajax.systems/es/blog/fireprotect-2-security-award-2024/",
+        },
+        {
+          title: "Australian Security Industry Awards 2023",
+          desc: "MotionCam (PhOD) y MotionCam Outdoor (PhOD) ganan los Australian Security Industry Awards 2023",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FASIAL_Awards_2023_preview_2x_7478b4dbc4%401.png&1714864570",
+          href: "https://ajax.systems/es/blog/australian-security-industry-awards-2023/",
+        },
+      ],
+      more: "Conoce más"
+    },
     contact: {
       title: "Solicita tu cotización",
       subtitle: "Sin compromiso. Respuesta rápida del equipo.",
@@ -100,132 +133,154 @@ export const translations = {
       send: "Enviar solicitud",
       thanks: "¡Gracias! Hemos recibido tu solicitud."
     },
-    videos: {
-      title: "Mira cómo funciona"
-    },
-    premios:{
-    title: "Premios",
-      subtitle: "Conoce los reconocimientos que han obtenido los sistemas de seguridad Ajax",
-      items: [
-        { 
-          title: "Red Dot Winner 2024", 
-          desc: "Ajax Systems gana su primer premio Red Dot Award por tres productos de seguridad y de domótica", 
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Freddot_switch_ab76b6f4e3%401.png&1715325401",
-          href:"https://ajax.systems/es/blog/ajax-systems-won-red-dot-award/",
-        },
-        { 
-          title: "Security Awards 2024", 
-          desc: "Ajax Systems gana el premio Security Awards 2024 como Mejor fabricante de equipamiento de seguridad domótica", 
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FCorporate_Vision_2024_preview_2x_462e208450%401.jpg&1714866025",
-          href:"https://ajax.systems/es/blog/security-awards-2024/",
-        },
-        { 
-          title: "GIT Security Award 2024", 
-          desc: "FireProtect 2 reconocido con el honorable premio GIT Security Award 2024", 
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FWGIT_Security_awards_2023_preview_2x_7a943fadfd%401.png&1714864288",
-          href:"https://ajax.systems/es/blog/fireprotect-2-security-award-2024/",
-        },
-        { 
-          title: "Australian Security Industry Awards 2023", 
-          desc: "MotionCam (PhOD) y MotionCam Outdoor (PhOD) ganan los Australian Security Industry Awards 2023", 
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FASIAL_Awards_2023_preview_2x_7478b4dbc4%401.png&1714864570",
-          href:"https://ajax.systems/es/blog/australian-security-industry-awards-2023/",
-        },
-      ],
-      more: "Conoce más"
-    },
     footer: { rights: "Todos los derechos reservados." }
   },
   en: {
-    nav: { 
-      home: "Home", 
-      services: "Services", 
-      benefits: "Benefits", 
-      why: "Why choose us?", 
-      testimonials: "Testimonials", 
-      contact: "Contact" 
+    nav: {
+      home: "Home",
+      services: "Services",
+      benefits: "Benefits",
+      why: "Why choose us?",
+      testimonials: "Testimonials",
+      contact: "Contact",
+      premios: "Awards"
     },
-    home: { 
+    home: {
       title: "Home"
     },
     hero: {
-      title: "Proteccion Total .Pro",
+      title: "Protección Total .Pro",
       title2: "for your home and business",
-      subtitle: "We install smart security systems in under 24 hours to protect what matters most.",
+      subtitle: "We install smart security systems in less than 24 hours to protect what matters most to you.",
       cta1: "Request a quote",
-      cta2: "Explore our services",
+      cta2: "Discover our services",
       bullets: [
-        "Installation in under 24 hours in Querétaro",
-        "No. 1 technology in europe",
-        "Local service in Querétaro with nationwide support"
+        "Installation in less than 24 hours in Querétaro",
+        "No. 1 technology in Europe",
+        "Local service in Querétaro, nationwide support"
       ]
     },
     services: {
       title: "Services",
-      subtitle: "Comprehensive solutions: alarms, video surveillance, instant alerts, and access control.",
+      subtitle: "Comprehensive solutions: alarms, video surveillance, alerts, and access control.",
       items: [
-        { 
-          title: "Smart alarms", 
-          desc: "Accurate intruder detection with sensors and real-time alerts.", 
+        {
+          title: "Smart alarms",
+          desc: "Accurate intruder detection with sensors and real-time alerts.",
           srcLight: "/srv/DevicesBlack.png",
           srcDark: "/srv/DevicesWhite.png"
         },
-        { title: "HD video surveillance", desc: "Clear images, night vision, and remote access from anywhere.", src:'/srv/Bulletcam.png' },
-        { title: "Instant alerts", desc: "Immediate notifications for any suspicious activity.", src:"/srv/alert.gif" },
-        { title: "Access control", desc: "Manage who enters and leaves with secure and simple solutions.", src:"/srv/acces.jpg" }
+        {
+          title: "HD video surveillance",
+          desc: "Clear images, night vision, and remote access from anywhere.",
+          src: "/srv/Bulletcam.png"
+        },
+        {
+          title: "Instant alerts",
+          desc: "Immediate notifications for any suspicious activity.",
+          src: "/srv/alert.gif"
+        },
+        {
+          title: "Access control",
+          desc: "Manage who enters and leaves with secure and simple solutions.",
+          src: "/srv/acces.jpg"
+        }
       ],
       more: "Learn more"
     },
     benefits: {
       title: "Benefits",
-      subtitle: "Cutting-edge technology with friendly, reliable service.",
+      subtitle: "Advanced technology with reliable, local service.",
       items: [
-        { title: "Express installation", desc: "In Querétaro and nearby areas, your system is ready in under 24 h." },
-        { title: "Integrated protection", desc: "Alarms, cameras, access control, and tech support in one solution." },
-        { title: "Personalized support", desc: "A professional team dedicated to your peace of mind." }
+        {
+          title: "Express installation",
+          desc: "In Querétaro and nearby areas, your system is ready in less than 24 h."
+        },
+        {
+          title: "Comprehensive protection",
+          desc: "Alarms, cameras, access control, and technical support in one solution."
+        },
+        {
+          title: "Personalized attention",
+          desc: "A professional team dedicated to your peace of mind and security."
+        }
       ]
     },
     why: {
       title: "Why choose us?",
-      subtitle: "We combine cutting-edge technology with reliable local service.",
+      subtitle: "We combine cutting-edge technology with trusted local service.",
       bullets: [
-        "Top-selling European technology", 
-        "Immediate response", 
-        "Tailored to your needs", 
-        "Ongoing technical support"
+        "Top-selling European technology",
+        "Immediate response",
+        "Tailored to your needs",
+        "Continuous technical support"
       ],
-      srcLight: "/srv/DevicesBlack.png",
-      srcDark: "/srv/DevicesWhite.png"
+      srcLight: "/images/DistB.png",
+      srcDark: "/images/Dist.png"
     },
     testimonials: {
       title: "Testimonials",
-      subtitle: "Our clients' peace of mind says it all.",
+      subtitle: "Our clients’ peace of mind says it all.",
       items: [
-        { 
-          author: "Carlos M.", 
-          text: "With Ajax I feel safe, I can monitor my business from my phone.", 
-          src: "/inst/anexo4.jpg" 
+        {
+          author: "Carlos M.",
+          text: "With Ajax I feel safe; I can monitor my business from my phone.",
+          src: "/inst/anexo4.jpg"
         },
         {
           author: "Laura G.",
-          text: "They installed it the same day, excellent service!", 
+          text: "They installed it the same day, excellent service!",
           src: "/inst/anexo1.jpg"
         }
       ]
     },
     process: {
       title: "Simple process",
-      subtitle: "From quotation to installation in 4 steps.",
+      subtitle: "From quote to installation in 4 steps.",
       steps: [
-        { t: "1. Quote", d: "Online or by phone" },
-        { t: "2. Schedule", d: "We pick a date and time" },
+        { t: "1. Get a quote", d: "Online or by phone" },
+        { t: "2. Schedule", d: "We set a date and time" },
         { t: "3. Configure", d: "Remote access and testing" },
         { t: "4. Enjoy", d: "Peace of mind 24/7" }
       ]
     },
+    videos: {
+      title: "See how it works"
+    },
+    premios: {
+      title: "Awards",
+      subtitle: "Discover the recognitions earned by Ajax security systems",
+      items: [
+        {
+          title: "Red Dot Winner 2024",
+          desc: "Ajax Systems wins its first Red Dot Award for three security and smart home products",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Freddot_switch_ab76b6f4e3%401.png&1715325401",
+          href: "https://ajax.systems/en/blog/ajax-systems-won-red-dot-award/"
+        },
+        {
+          title: "Security Awards 2024",
+          desc: "Ajax Systems wins the 2024 Security Awards as Best Smart Home Security Equipment Manufacturer",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FCorporate_Vision_2024_preview_2x_462e208450%401.jpg&1714866025",
+          href: "https://ajax.systems/en/blog/security-awards-2024/"
+        },
+        {
+          title: "GIT Security Award 2024",
+          desc: "FireProtect 2 recognized with the prestigious GIT Security Award 2024",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FWGIT_Security_awards_2023_preview_2x_7a943fadfd%401.png&1714864288",
+          href: "https://ajax.systems/en/blog/fireprotect-2-security-award-2024/"
+        },
+        {
+          title: "Australian Security Industry Awards 2023",
+          desc: "MotionCam (PhOD) and MotionCam Outdoor (PhOD) win the 2023 Australian Security Industry Awards",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FASIAL_Awards_2023_preview_2x_7478b4dbc4%401.png&1714864570",
+          href: "https://ajax.systems/en/blog/australian-security-industry-awards-2023/"
+        }
+      ],
+      more: "Learn more"
+    },
     contact: {
       title: "Request your quote",
-      subtitle: "No commitment. Quick response from our team.",
+      subtitle: "No obligation. Fast response from our team.",
       name: "Full name",
       phone: "Phone",
       email: "Email",
@@ -233,8 +288,8 @@ export const translations = {
       services: ["Alarms", "Video surveillance", "Access control", "IT solutions"],
       comments: "Tell us what you need",
       send: "Send request",
-      thanks: "Thank you! We've received your request."
+      thanks: "Thank you! We’ve received your request."
     },
     footer: { rights: "All rights reserved." }
-  }
+  }  
 };
