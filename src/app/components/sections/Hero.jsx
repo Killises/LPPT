@@ -2,12 +2,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { translations } from "../../../translations/translations";
+import Section from "../Section";
 
 export default function Hero({ lang }) {
   const t = translations[lang]
   
   return (
-    <div id="home" className=" relative overflow-hidden dark:bg-brand-backgroundSecondary ">
+    <Section id="home" className=" relative overflow-hidden" muted>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-100 via-white to-white dark:bg-slate-800" />
         <div className="container py-20 grid lg:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.0 }}>
@@ -43,6 +44,7 @@ export default function Hero({ lang }) {
           <motion.div initial={{ opacity: 0, scale: 0.60 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1.5 }}>
             <div className="relative aspect-video rounded-3xl flex items-center justify-center">
               <Image className="w-full max-w-xs sm:max-w-md h-auto mx-auto"
+                alt="Casa Jeweller"
                 width={1200}
                 height={600}
                 quality={95}
@@ -51,6 +53,6 @@ export default function Hero({ lang }) {
             </div>
           </motion.div>
         </div>
-    </div>
+    </Section>
   );
 }

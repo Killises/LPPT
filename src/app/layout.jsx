@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Protección Total .Pro",
     description: "Descubre Protección Total, tu aliado en seguridad. Instalamos alarmas de seguridad, cámaras y control de accesos en Querétaro en menos de 24 h. Protege tu hogar o negocio con tecnología avanzada.",
-    url: "",
+    url: "/",
     siteName: "Protección Total .Pro",
     images: [
       {

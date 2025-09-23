@@ -103,7 +103,8 @@ export default function Header({ lang, setLang }) {
           <a href="#elegirnos" className="a hover:text-slate-900" onClick={() => setMenuOpen(false)}>{t.nav.why}</a>
           <a href="#testimonios" className="a hover:text-red-700" onClick={() => setMenuOpen(false)}>{t.nav.testimonials}</a>
             <a href="#contacto" className="a hover:text-slate-950" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
-            <button className="btn btn-primary rounded-lg text-sm ">{t.hero.cta1}</button>
+            <a href="#contacto" className="">
+            <button className="btn btn-primary rounded-lg text-sm ">{t.hero.cta1}</button></a>
             <div className="flex gap-4">
               <LanguageToggle lang={lang} setLang={setLang} />
               <ThemeToggle />

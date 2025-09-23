@@ -1,6 +1,6 @@
 export default function Section2({ id, title, subtitle, children, muted = false }) {
   return (
-    <section id={id} className={muted ? "py-14 bg-slate-50 dark:bg-brand-backgroud" : "py-16"}>
+    <section id={id} className={muted ? "py-14 bg-white dark:bg-brand-backgroud" : "py-16"}>
       <div className="container">
         {(title || subtitle) && (
           <div className="text-center mb-10">

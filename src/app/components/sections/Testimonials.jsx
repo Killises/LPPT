@@ -19,9 +19,14 @@ export default function Testimonials({ lang }) {
                     <p className="text-slate-700 dark:text-slate-300">“{x.text}”</p>
                     <p className="mt-4 text-sm text-slate-500 dark:text-slate-100">— {x.author}</p>
                     <div className="mt-4  relative justify-items-center" >
-                      <img className=" rounded-2xl h-auto w-1/3 "
+                      <Image className=" rounded-2xl w-5/12 h-auto max-w-xs sm:max-w-md mx-auto"
                         src={x.src}
                         alt="Logo"
+                        unoptimized
+                        width={600}
+                        height={600}
+                        quality={95}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     </div>
                   </div>

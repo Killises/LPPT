@@ -29,7 +29,7 @@ html, body {
   @apply rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-brand-backgroud dark:text-slate-50 shadow-sm;
 }
 .card-section {
-  @apply rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-brand-backgroundSecondary dark:text-slate-50 shadow-sm;
+  @apply rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-brand-backgroundSecondary dark:text-slate-50 shadow-sm;
 }
 .card-body {
   @apply p-6;
@@ -48,5 +48,5 @@ html, body {
   @apply hover:text-brand-text  dark:text-gray-50 dark:hover:text-gray-400
 }
 .bg{
-  @apply bg-slate-100 dark:bg-brand-backgroud
+  @apply bg-slate-50 dark:bg-brand-backgroud
 }
