@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { Montserrat } from 'next/font/google'
 import { ThemeProvider } from '../context/ThemeProvider';
+import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           {children}
         </ThemeProvider>
+        <Analytics/>
       </body>
     </html>
   );
