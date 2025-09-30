@@ -291,5 +291,5 @@ export const translations = {
       thanks: "Thank you! We’ve received your request."
     },
     footer: { rights: "All rights reserved." }
-  }  
+  }
 };

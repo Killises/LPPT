@@ -14,11 +14,11 @@ export default function Premios({ lang }) {
 
   return (
     <Section id="premios" title={t.premios.title} subtitle={t.premios.subtitle} className="dark:bg-slate-800">
-      <motion.div 
-        variants={container} 
-        initial="hidden" 
-        whileInView="show" 
-        viewport={{ once: true, amount: 0.2 }} 
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
         className="grid md:grid-cols-4 gap-6 items-stretch">
         {t.premios.items.map((s, i) => (
           <motion.div variants={item} key={i} className="flex justify-between" >
@@ -26,27 +26,24 @@ export default function Premios({ lang }) {
               <h3 className="text-md font-semibold ">{s.title}</h3>
               <p className=" text-sm text-slate-600 dark:text-slate-200" >{s.desc}</p>
               <div className="grid">
-              <div className=" mt-4 h-full w-full relative " >
+                <div className=" mt-4 h-full w-full relative " >
                   <a href={s.href}>
                     <Image
-                  className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
-                  src={s.srcDark && darkMode ? s.srcDark : s.srcLight || s.src}
-                  alt="Logo"
-                  unoptimized
-                  width={1200}
-                  height={600}
-                  quality={95}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                </a>
-                
-              </div>
-              <a href={s.href} className="btn btn-secondary rounded-lg text-sm mt-4" >
-                  Saber Mas 
-                </a>
-                
-
+                      className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
+                      src={s.srcDark && darkMode ? s.srcDark : s.srcLight || s.src}
+                      alt="Logo"
+                      unoptimized
+                      width={1200}
+                      height={600}
+                      quality={95}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </a>
                 </div>
+                <a href={s.href} className="btn btn-secondary rounded-lg text-sm mt-4" >
+                  Saber Mas
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}

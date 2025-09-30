@@ -4,7 +4,6 @@ import { ThemeProvider } from '../context/ThemeProvider';
 import { Analytics } from "@vercel/analytics/next"
 
 
-
 const montserrat = Montserrat({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['latin'] })
 
 export const metadata = {
@@ -19,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Protección Total .Pro",
     description: "Descubre Protección Total, tu aliado en seguridad. Instalamos alarmas de seguridad, cámaras y control de accesos en Querétaro en menos de 24 h. Protege tu hogar o negocio con tecnología avanzada.",
-    url: "/",
+    url: "https://protecciontotal.pro",
     siteName: "Protección Total .Pro",
     images: [
       {
@@ -28,10 +27,10 @@ export const metadata = {
         height: 630,
         alt: "Protección Total .Pro",
       }
-    ]
+    ],
+    type: "website"
   }
 };
-
 
 
 export default function RootLayout({ children }) {
@@ -41,6 +40,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           {children}
         </ThemeProvider>
+
         <Analytics/>
       </body>
     </html>

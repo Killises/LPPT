@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { translations } from "../translations/translations";
-import { motion } from "framer-motion";
 import Header from "./components/layout/Header";
 import Hero from "./components/sections/Hero"
 import Services from "./components/sections/Services";
@@ -13,14 +12,12 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
 import Videos from "./components/sections/Videos";
 import Premios from "./components/sections/Premios";
-import Section from "./components/Section";
 
 export default function Landing() {
 
   const [lang, setLang] = useState("es");
   const t = translations[lang];
   
-
   return (
     <div className="bg min-h-screen bg-gradient-to-b text-slate-900">
       <Header lang={lang} setLang={setLang} />

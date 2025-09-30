@@ -14,7 +14,6 @@ export default function Videos({ lang }) {
             className="w-full h-full rounded-lg shadow-lg"
             src="https://www.youtube.com/embed/iok9x8-iZX0?si=PCi6SaYhYykfgALI" 
             title="YouTube video 1"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -26,7 +25,6 @@ export default function Videos({ lang }) {
             className="w-full h-full rounded-lg shadow-lg"
             src="https://www.youtube.com/embed/KIIVEtgXPkM?si=mDGSw3nh_IyZ7rdR"
             title="YouTube video 2"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen

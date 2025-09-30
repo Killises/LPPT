@@ -8,7 +8,7 @@ export default function Benefits({ lang }) {
 
   return (
 
-    < Section id = "beneficios" title = { t.benefits.title } subtitle = { t.benefits.subtitle } muted >
+    < Section id="beneficios" title={t.benefits.title} subtitle={t.benefits.subtitle} muted >
       <div className="grid md:grid-cols-3 gap-6">
         {t.benefits.items.map((b, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35 }} className="card">
@@ -19,7 +19,6 @@ export default function Benefits({ lang }) {
           </motion.div>
         ))}
       </div>
-  </Section >
-  
+    </Section >
   );
 }
