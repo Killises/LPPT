@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import { Montserrat } from 'next/font/google'
 import { ThemeProvider } from '../context/ThemeProvider';
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 const montserrat = Montserrat({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['latin'] })
