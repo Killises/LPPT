@@ -35,7 +35,7 @@ export const translations = {
           srcDark: "/srv/DevicesWhite.webp"
         },
         { title: "Videovigilancia HD", desc: "Imágenes nítidas, visión nocturna y acceso remoto desde cualquier lugar.", src: '/srv/Bulletcam.webp' },
-        { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa.", src: "/srv/alert.gif" },
+        { title: "Alertas instantáneas", desc: "Notificaciones al instante ante cualquier actividad sospechosa.", src: "/srv/alert.webp" },
         { title: "Control de acceso", desc: "Administra quién entra y sale con soluciones seguras y sencillas.", src: "/srv/acces.webp" }
       ],
       more: "Conoce más"
@@ -178,7 +178,7 @@ export const translations = {
         {
           title: "Instant alerts",
           desc: "Immediate notifications for any suspicious activity.",
-          src: "/srv/alert.gif"
+          src: "/srv/alert.webp"
         },
         {
           title: "Access control",
