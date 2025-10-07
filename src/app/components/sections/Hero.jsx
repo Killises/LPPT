@@ -48,7 +48,7 @@ export default function Hero({ lang }) {
               width={1200}
               height={600}
               quality={95}
-              src="/images/Jeweller House.png"
+              src="/images/Jeweller House.webp"
               sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
         </motion.div>
