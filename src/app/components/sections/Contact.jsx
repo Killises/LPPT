@@ -152,7 +152,7 @@ export default function Contact({ lang }) {
             )}
             <button type="submit" className="btn btn-primary rounded-2xl">{t.contact.send}</button>
           </div>
-          <p className="text-center text-sm mt-2">{status}</p>
+          <p className="text-slate-700 dark:text-slate-200 text-center text-sm mt-2">{status}</p>
         </form>
         <div id='contactoDirecto' className="card bg-brand-backgroundSecondary">
           <div className="card-body">

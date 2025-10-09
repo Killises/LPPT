@@ -22,6 +22,7 @@ export default function Services({ lang }) {
               <p className="mt-2 text-slate-600 dark:text-slate-200" >{s.desc}</p>
               <div className="mt-4  h-1/2 w-10/12 relative " >
                 <Image
+                  loading="lazy"
                   className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
                   src={s.srcDark && darkMode ? s.srcDark : s.srcLight || s.src}
                   alt="Logo"

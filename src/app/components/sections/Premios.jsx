@@ -29,6 +29,7 @@ export default function Premios({ lang }) {
                 <div className=" mt-4 h-full w-full relative " >
                   <a href={s.href}>
                     <Image
+                      loading="lazy"
                       className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
                       src={s.srcDark && darkMode ? s.srcDark : s.srcLight || s.src}
                       alt="Logo"

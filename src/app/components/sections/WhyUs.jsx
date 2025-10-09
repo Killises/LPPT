@@ -24,7 +24,9 @@ export default function WhyUs({ lang }) {
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
           <div className=" h-auto w-auto relative aspect-[2/2] rounded-3xl  flex items-center justify-center">
-            <Image className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
+            <Image 
+              loading="lazy"
+              className="rounded-2xl w-full max-w-xs sm:max-w-md h-auto mx-auto"
               src={darkMode ? t.why.srcLight : t.why.srcDark}
               alt="Logo de distribuidores Ajax"
               unoptimized

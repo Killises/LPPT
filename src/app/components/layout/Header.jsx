@@ -19,6 +19,7 @@ export default function Header({ lang, setLang }) {
         {/* Logo */}
         <a href="#home">
         <Image
+          loading="lazy"
           src={darkMode ? "/images/darkLogo.webp" : "/images/Logo.webp"}
           alt="Logo ProteccionTotal.Pro"
           href="#home"
