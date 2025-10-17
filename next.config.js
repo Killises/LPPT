@@ -12,7 +12,7 @@ const nextConfig = {
             value: 'landing.protecciontotal.pro',
           },
         ],
-        destination: '/promo',
+        destination: '/landing',
         permanent: false,
       },
     ];
