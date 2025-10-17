@@ -8,10 +8,10 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'promo.protecciontotal.pro',
+            value: 'landing.protecciontotal.pro',
           },
         ],
-        destination: '/promo',
+        destination: '/landing',
       },
     ];
   },
