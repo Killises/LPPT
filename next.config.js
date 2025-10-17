@@ -1,7 +1,8 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
    // 🔹 Redirección del subdominio promo.protecciontotal.pro → /promo
-   async rewrites() {
+   async redirects() {
     return [
       {
         source: '/',
@@ -11,7 +12,8 @@ const nextConfig = {
             value: 'landing.protecciontotal.pro',
           },
         ],
-        destination: '/landing',
+        destination: '/promo',
+        permanent: false,
       },
     ];
   },
