@@ -1,10 +1,10 @@
 'use client';
 import { useState } from "react";
 import { useTheme } from "../../../context/ThemeProvider";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../shared/ThemeToggle"
 import { motion } from "framer-motion";
 import Image from "next/image";
-import LanguageToggle from "./LanguageToggle";
+import LanguageToggle from "../shared/LanguageToggle";
 import { translations } from "../../../translations/translations";
 
 export default function Header({ lang, setLang }) {

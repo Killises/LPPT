@@ -1,6 +1,6 @@
 "use client";
 import { translations } from "../../../translations/translations";
-import Section from "../Section";
+import Section from "../shared/Section";
 
 export default function Videos({ lang }) {
   const t = translations[lang]

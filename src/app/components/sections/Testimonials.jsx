@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { translations } from "../../../translations/translations";
-import Section from "../Section";
+import Section from "../shared/Section";
 
 export default function Testimonials({ lang }) {
   const t = translations[lang]

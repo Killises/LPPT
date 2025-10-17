@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { translations } from "../../../translations/translations";
-import Section from "../Section";
+import Section from "../shared/Section";
 
 export default function Contact({ lang }) {
   const t = translations[lang]
@@ -177,6 +177,7 @@ export default function Contact({ lang }) {
             </ul>
             <div id="maps" className=" mt-6 aspect-video rounded-2xl  shadow-inner flex items-center justify-center p-0">
               <iframe
+                title="Mapa Ubicacion"
                 className="rounded-2xl"
                 width="100%"
                 height="100%"

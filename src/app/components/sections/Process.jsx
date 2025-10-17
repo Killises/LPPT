@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { translations } from "../../../translations/translations";
-import Section from "../Section";
+import Section from "../shared/Section";
 
 export default function Process({ lang }) {
   const t = translations[lang]
