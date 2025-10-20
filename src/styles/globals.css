@@ -26,7 +26,7 @@ body {
 }
 
 .btn-secondary {
-  @apply bg-brand-accent text-white hover:bg-brand-accentSecondary dark:bg-brand-accent dark:hover:bg-brand-accentSecondary;
+  @apply bg-brand-accent text-white dark:text-gray-900 hover:bg-brand-accentSecondary dark:bg-brand-accent dark:hover:bg-brand-accentSecondary;
 }
 
 .btn-outline {
