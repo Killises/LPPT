@@ -2,23 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import NextSeo from "next-seo";
 
 export default function LandingPage() {
   return (
     <>
-      <head>
-        <script type="text/javascript">
-          (function () {
-            var ldk = document.createElement('script');
-            ldk.type = 'text/javascript';
-            ldk.async = true;
-            ldk.src = 'https://s.cliengo.com/weboptimizer/68ffdcd972e61a3d8918dcda/68ffdcd972e61a3d8918dcdd.js?platform=onboarding_modular';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);
-          }
-          )();
-        </script>
-      </head>
+
       <main className="min-h-screen flex flex-col items-center justify-center bg text-white text-center px-8 py-2">
         <Image
           src="/images/ajax-offer.png"
