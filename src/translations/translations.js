@@ -95,28 +95,28 @@ export const translations = {
       subtitle: "Conoce los reconocimientos que han obtenido los sistemas de seguridad Ajax",
       items: [
         {
-          title: "Red Dot Winner 2024",
-          desc: "Ajax Systems gana su primer premio Red Dot Award por tres productos de seguridad y de domótica",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Freddot_switch_ab76b6f4e3%401.webp&1715325401",
-          href: "https://ajax.systems/es/blog/ajax-systems-won-red-dot-award/",
+          title: "Southeast Asia OSPAs 2025",
+          desc: "DomeCam Mini gana en los Southeast Asia OSPAs 2025",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fcover_OSPA_2025_4d100e0326%402.jpg&1764171239",
+          href: "https://ajax.systems/es/blog/wins-2025-southeast-asia-osps/",
         },
         {
-          title: "Security Awards 2024",
-          desc: "Ajax Systems gana el premio Security Awards 2024 como Mejor fabricante de equipamiento de seguridad domótica",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FCorporate_Vision_2024_preview_2x_462e208450%401.webp&1714866025",
-          href: "https://ajax.systems/es/blog/security-awards-2024/",
+          title: "Benchmark Innovation Awards 2025",
+          desc: "Ajax Systems gana los premios Benchmark Innovation Awards 2025",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fcover_benchmark_win_33244103c2%402.jpg&1760451333",
+          href: "https://ajax.systems/es/blog/ajax-systems-wins-at-the-benchmark-innovation-awards-2025/",
         },
         {
-          title: "GIT Security Award 2024",
-          desc: "FireProtect 2 reconocido con el honorable premio GIT Security Award 2024",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FWGIT_Security_awards_2023_preview_2x_7a943fadfd%401.webp&1714864288",
-          href: "https://ajax.systems/es/blog/fireprotect-2-security-award-2024/",
+          title: "PSI Premier Awards 2025",
+          desc: "Los detectores FireProtect 2 ganan en los PSI Premier Awards 2025",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fpsi_cover_89d0a4d1a3%402.jpg&1752832233",
+          href: "https://ajax.systems/es/blog/fireprotect-2-detectors-win-psi-premier-awards/",
         },
         {
-          title: "Australian Security Industry Awards 2023",
-          desc: "MotionCam (PhOD) y MotionCam Outdoor (PhOD) ganan los Australian Security Industry Awards 2023",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FASIAL_Awards_2023_preview_2x_7478b4dbc4%401.webp&1714864570",
-          href: "https://ajax.systems/es/blog/australian-security-industry-awards-2023/",
+          title: "Seguridad del patrimonio: Ajax Systems protege la exposición del sable del Hetman Mazepa en la Torre de Londres",
+          desc: "",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fcover_sabre_cfebe4acef%402.jpg&1752843393",
+          href: "https://ajax.systems/es/blog/ajax-systems-protects-hetman-mazepas-sabre-exhibition/",
         },
       ],
       more: "Conoce más"
@@ -252,28 +252,28 @@ export const translations = {
       subtitle: "Discover the recognitions earned by Ajax security systems",
       items: [
         {
-          title: "Red Dot Winner 2024",
-          desc: "Ajax Systems wins its first Red Dot Award for three security and smart home products",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Freddot_switch_ab76b6f4e3%401.webp&1715325401",
-          href: "https://ajax.systems/en/blog/ajax-systems-won-red-dot-award/"
+          title: "Southeast Asia OSPAs 2025",
+          desc: "DomeCam Mini wins at the 2025 Southeast Asia OSPAs",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fcover_OSPA_2025_4d100e0326%402.jpg&1764171239",
+          href: "https://ajax.systems/es/blog/wins-2025-southeast-asia-osps/",
         },
         {
-          title: "Security Awards 2024",
-          desc: "Ajax Systems wins the 2024 Security Awards as Best Smart Home Security Equipment Manufacturer",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FCorporate_Vision_2024_preview_2x_462e208450%401.webp&1714866025",
-          href: "https://ajax.systems/en/blog/security-awards-2024/"
+          title: "Benchmark Innovation Awards 2025",
+          desc: "Ajax Systems wins at the Benchmark Innovation Awards 2025",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fcover_benchmark_win_33244103c2%402.jpg&1760451333",
+          href: "https://ajax.systems/blog/ajax-systems-wins-at-the-benchmark-innovation-awards-2025/",
         },
         {
-          title: "GIT Security Award 2024",
-          desc: "FireProtect 2 recognized with the prestigious GIT Security Award 2024",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FWGIT_Security_awards_2023_preview_2x_7a943fadfd%401.webp&1714864288",
-          href: "https://ajax.systems/en/blog/fireprotect-2-security-award-2024/"
+          title: "PSI Premier Awards 2025",
+          desc: "FireProtect 2 detectors win at the 2025 PSI Premier Awards",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fpsi_cover_89d0a4d1a3%402.jpg&1752832233",
+          href: "https://ajax.systems/es/blog/fireprotect-2-detectors-win-psi-premier-awards/",
         },
         {
-          title: "Australian Security Industry Awards 2023",
-          desc: "MotionCam (PhOD) and MotionCam Outdoor (PhOD) win the 2023 Australian Security Industry Awards",
-          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2FASIAL_Awards_2023_preview_2x_7478b4dbc4%401.webp&1714864570",
-          href: "https://ajax.systems/en/blog/australian-security-industry-awards-2023/"
+          title: "Heritage Security: Ajax Systems protects Hetman Mazepa's sabre exhibition at the Tower of London",
+          desc: "",
+          src: "https://ajax.systems/api/cdn-img/?img=%2Fupload%2Fcover_sabre_cfebe4acef%402.jpg&1752843393",
+          href: "https://ajax.systems/blog/ajax-systems-protects-hetman-mazepas-sabre-exhibition/"
         }
       ],
       more: "Learn more"

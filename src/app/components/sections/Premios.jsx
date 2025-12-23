@@ -42,7 +42,7 @@ export default function Premios({ lang }) {
                   </a>
                 </div>
                 <a href={s.href} className="btn btn-secondary rounded-lg text-sm mt-4" >
-                  Saber Mas
+                  {t.premios.more}
                 </a>
               </div>
             </div>
