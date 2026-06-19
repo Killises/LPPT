@@ -7,7 +7,7 @@ export default function Contact({ lang }) {
   const t = translations[lang]
 
   //Fromspree
-  const [form, setForm] = useState({ name: "", phone: "", email: "", servicio: t.contact.services[0], comentarios: "" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", servicio: t.contact.services[0], message: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("");
 
@@ -18,11 +18,10 @@ export default function Contact({ lang }) {
     if (field === "name" && !value.trim()) {
       error = "El nombre es obligatorio.";
     }
-    if (field === "phone" && !value.trim()) {
+    if (field === "phone") {
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
       if (!value) error = "El telefono es obligatorio.";
       else if (!phoneRegex.test(value)) error = "Numero inválido.";
-      error = "El telefono es obligatorio.";
     }
     if (field === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -52,7 +51,7 @@ export default function Contact({ lang }) {
 
     // Validar todos los campos antes de enviar
     const isNameValid = validate("name", form.name);
-    const isPhoneValid = validate("message", form.phone);
+    const isPhoneValid = validate("phone", form.phone);
     const isEmailValid = validate("email", form.email);
     const isMessageValid = validate("message", form.message);
 
@@ -64,18 +63,25 @@ export default function Contact({ lang }) {
     setStatus("Enviando...");
 
     try {
-      const res = await fetch("https://formspree.io/f/myzdojnz", {
+      const payload = new FormData();
+      payload.append("name", form.name);
+      payload.append("phone", form.phone);
+      payload.append("email", form.email);
+      payload.append("servicio", form.servicio);
+      payload.append("message", form.message);
+
+      const res = await fetch("https://formspree.io/f/xjgdnawd", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { Accept: "application/json" },
+        body: payload,
       });
 
       if (res.ok) {
         setStatus("Mensaje enviado con éxito ✅");
-        setForm({ name: "", phone: "", email: "", servicio: t.contact.services[0], comentarios: "" });
+        setForm({ name: "", phone: "", email: "", servicio: t.contact.services[0], message: "" });
         setErrors({});
       } else {
-        setStatus("Error al enviar ❌");
+        setStatus("Error al enviar ❌ Intenta de nuevo en unos minutos.");
       }
     } catch (err) {
       console.error(err);
@@ -181,7 +187,7 @@ export default function Contact({ lang }) {
                 className="rounded-2xl"
                 width="100%"
                 height="100%"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDoOLq_ts27g3vEog9sGYB0GJSyWBDK9gs&center=20.5999582%2C-100.4207807&zoom=12&q=Proteccion%Total%.%Pro"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.7057430905334!2d-100.42335732475509!3d20.60007108094424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b1ec397e0e7%3A0xbbef329d9cad2772!2sProteccion%20Total%20.%20Pro!5e0!3m2!1ses-419!2smx!4v1781903220217!5m2!1ses-419!2smx"
                 allowFullScreen>
               </iframe>
             </div>
